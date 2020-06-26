@@ -1,13 +1,15 @@
-@tailwind base;
-@tailwind components;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
 
 /**
  * Purpose:
  * Assign height: "100%" to
  * html, body, #root
  */
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
-@tailwind utilities;
+@import 'tailwindcss/utilities';
