@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
+it('should render App component', () => {
+  const wrapper = mount(<App />);
 
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  expect(wrapper.text()).toBe('Address book app');
 });
