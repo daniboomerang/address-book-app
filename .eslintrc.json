@@ -4,6 +4,7 @@
   "parser": "babel-eslint",
   "rules": {
     "prettier/prettier": ["error", { "blankLine": "always", "prev": "*", "next": "return" }],
+    "object-curly-newline": "off",
     "padding-line-between-statements": [
       "error",
       { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
@@ -11,6 +12,16 @@
         "blankLine": "any",
         "prev": ["const", "let", "var"],
         "next": ["const", "let", "var"]
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never",
+        "imports": "always-multiline",
+        "objects": "always-multiline"
       }
     ],
     "react/prop-types": 0, //FIXME: Temporarily disabling this rule.
