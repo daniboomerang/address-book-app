@@ -1,6 +1,14 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 
+.bg-primary {
+  background: #0f0817;
+}
+
+.border-primary {
+  border-color: #0f0817;
+}
+
 /**
  * Purpose:
  * Assign height: "100%" to
@@ -10,6 +18,8 @@ html,
 body,
 #root {
   height: 100%;
+  @apply bg-primary;
+  @apply text-blue-500;
 }
 
 @import 'tailwindcss/utilities';

@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserPreview component should render correctly 1`] = `
+<UserPreview
+  user={
+    Object {
+      "cell": "88592966",
+      "dob": Object {
+        "age": 70,
+        "date": "1950-02-27T16:49:15.705Z",
+      },
+      "email": "simon.petersen@example.com",
+      "gender": "male",
+      "id": Object {
+        "name": "CPR",
+        "value": "270250-8357",
+      },
+      "location": Object {
+        "city": "Tisvilde",
+        "coordinates": Object {
+          "latitude": "-27.4297",
+          "longitude": "-37.0144",
+        },
+        "country": "Denmark",
+        "postcode": 28816,
+        "state": "Danmark",
+        "street": Object {
+          "name": "Gormsvej",
+          "number": 3865,
+        },
+        "timezone": Object {
+          "description": "Abu Dhabi, Muscat, Baku, Tbilisi",
+          "offset": "+4:00",
+        },
+      },
+      "login": Object {
+        "md5": "ac3673267c4606e6fa5f754047d57a4a",
+        "password": "testibil",
+        "salt": "uPCA1DOi",
+        "sha1": "c1e2a5b2e2daa5020a02b4ba54bc8881b4233b6c",
+        "sha256": "4797c6d5a893a92bccca7b09cb8c19381d909389bbfeab3a6a9ec07bc8503b23",
+        "username": "purplebird556",
+        "uuid": "dca63e13-5a76-4d7a-aea1-817919275f83",
+      },
+      "name": Object {
+        "first": "Simon",
+        "last": "Petersen",
+        "title": "Mr",
+      },
+      "nat": "DK",
+      "phone": "05143951",
+      "picture": Object {
+        "large": "https://randomuser.me/api/portraits/men/59.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/59.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/59.jpg",
+      },
+      "registered": Object {
+        "age": 10,
+        "date": "2010-10-27T11:48:05.160Z",
+      },
+    }
+  }
+>
+  <div
+    className="w-full block sm:flex border-4 text-center border-light my-6 transform cursor-pointer duration-200 hover:scale-110 border-blue-500"
+    data-testid="user-simon.petersen@example.com"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="flex border-b-4 py-4 sm:border-r-4 sm:border-b-0 items-center justify-center duration-200 border-blue-500"
+    >
+      <div
+        className="flex border-4 rounded-full mx-4 md:mx-8 justify-center duration-200 transform w-20 h-20 border-blue-500"
+      >
+        <img
+          alt="purplebird556"
+          className="border-primary rounded-full transform duration-200 border-4"
+          data-testid="https://randomuser.me/api/portraits/men/59.jpg"
+          src="https://randomuser.me/api/portraits/men/59.jpg"
+        />
+      </div>
+    </div>
+    <div
+      className="p-4 m-auto"
+    >
+      <div
+        className="my-1 text-lg md:text-xl"
+      >
+        <span
+          className="mr-1"
+          data-testid="Simon"
+        >
+          Simon
+        </span>
+        <span
+          className="ml-1"
+          data-testid="Petersen"
+        >
+          Petersen
+        </span>
+      </div>
+      <div
+        className="my-1 text-base md:text-lg"
+        data-testid="purplebird556"
+      >
+        purplebird556
+      </div>
+      <div
+        className="my-1 text-sm mb-4"
+        data-testid="simon.petersen@example.com"
+      >
+        simon.petersen@example.com
+      </div>
+    </div>
+  </div>
+</UserPreview>
+`;
+
+exports[`UserPreview component should transition from blue to red color on hover 1`] = `
+<UserPreview
+  user={
+    Object {
+      "cell": "88592966",
+      "dob": Object {
+        "age": 70,
+        "date": "1950-02-27T16:49:15.705Z",
+      },
+      "email": "simon.petersen@example.com",
+      "gender": "male",
+      "id": Object {
+        "name": "CPR",
+        "value": "270250-8357",
+      },
+      "location": Object {
+        "city": "Tisvilde",
+        "coordinates": Object {
+          "latitude": "-27.4297",
+          "longitude": "-37.0144",
+        },
+        "country": "Denmark",
+        "postcode": 28816,
+        "state": "Danmark",
+        "street": Object {
+          "name": "Gormsvej",
+          "number": 3865,
+        },
+        "timezone": Object {
+          "description": "Abu Dhabi, Muscat, Baku, Tbilisi",
+          "offset": "+4:00",
+        },
+      },
+      "login": Object {
+        "md5": "ac3673267c4606e6fa5f754047d57a4a",
+        "password": "testibil",
+        "salt": "uPCA1DOi",
+        "sha1": "c1e2a5b2e2daa5020a02b4ba54bc8881b4233b6c",
+        "sha256": "4797c6d5a893a92bccca7b09cb8c19381d909389bbfeab3a6a9ec07bc8503b23",
+        "username": "purplebird556",
+        "uuid": "dca63e13-5a76-4d7a-aea1-817919275f83",
+      },
+      "name": Object {
+        "first": "Simon",
+        "last": "Petersen",
+        "title": "Mr",
+      },
+      "nat": "DK",
+      "phone": "05143951",
+      "picture": Object {
+        "large": "https://randomuser.me/api/portraits/men/59.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/59.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/59.jpg",
+      },
+      "registered": Object {
+        "age": 10,
+        "date": "2010-10-27T11:48:05.160Z",
+      },
+    }
+  }
+>
+  <div
+    className="w-full block sm:flex border-4 text-center border-light my-6 transform cursor-pointer duration-200 hover:scale-110 border-red-600 text-red-600 rounded-md"
+    data-testid="user-simon.petersen@example.com"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="flex border-b-4 py-4 sm:border-r-4 sm:border-b-0 items-center justify-center duration-200 border-red-600"
+    >
+      <div
+        className="flex border-4 rounded-full mx-4 md:mx-8 justify-center duration-200 transform w-24 h-24 border-red-600"
+      >
+        <img
+          alt="purplebird556"
+          className="border-primary rounded-full transform duration-200 border-4"
+          data-testid="https://randomuser.me/api/portraits/men/59.jpg"
+          src="https://randomuser.me/api/portraits/men/59.jpg"
+        />
+      </div>
+    </div>
+    <div
+      className="p-4 m-auto"
+    >
+      <div
+        className="my-1 text-lg md:text-xl"
+      >
+        <span
+          className="mr-1"
+          data-testid="Simon"
+        >
+          Simon
+        </span>
+        <span
+          className="ml-1"
+          data-testid="Petersen"
+        >
+          Petersen
+        </span>
+      </div>
+      <div
+        className="my-1 text-base md:text-lg"
+        data-testid="purplebird556"
+      >
+        purplebird556
+      </div>
+      <div
+        className="my-1 text-sm mb-4"
+        data-testid="simon.petersen@example.com"
+      >
+        simon.petersen@example.com
+      </div>
+    </div>
+  </div>
+</UserPreview>
+`;

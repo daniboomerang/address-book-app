@@ -619,6 +619,14 @@ video {
   }
 }
 
+.bg-primary {
+  background: #0f0817;
+}
+
+.border-primary {
+  border-color: #0f0817;
+}
+
 /**
  * Purpose:
  * Assign height: "100%" to
@@ -629,6 +637,10 @@ html,
 body,
 #root {
   height: 100%;
+  background: #0f0817;
+  --text-opacity: 1;
+  color: #4299e1;
+  color: rgba(66, 153, 225, var(--text-opacity));
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
