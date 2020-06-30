@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { render, cleanup, waitFor } from '@testing-library/react';
 import axios from 'axios';
 import { fetchMockedData, usersMockedData } from '../__mocks__/mocked-data';
+import { MemoryRouter } from 'react-router-dom';
 import Home, { PAGE_SIZE } from './Home';
 
 jest.mock('axios');
@@ -27,7 +28,11 @@ describe('Home page component', () => {
   it('should properly display users on fetch error', async () => {
     axios.get.mockImplementationOnce(() => Promise.reject({ message: 'errorMessage' }));
 
-    const { getAllByTestId, getByTestId } = render(<Home />);
+    const { getAllByTestId, getByTestId } = render(
+      <MemoryRouter keyLength={0}>
+        <Home />
+      </MemoryRouter>
+    );
 
     // Users wrapper is correctly rendered
     const home = await waitFor(() => getByTestId('home'));
@@ -36,7 +41,7 @@ describe('Home page component', () => {
     // ErrorMessage is correctly rendered
     const errorMessage = getByTestId('fetch-error-message');
     expect(errorMessage.textContent).toBe(
-      'Ups! There has been an error retrieving contacts.Refresh the page if the problem persists.'
+      'Error retrieving contacts.Refresh if the problem persists.'
     );
 
     // Axios is correctly invoked
@@ -51,7 +56,11 @@ describe('Home page component', () => {
       () => new Promise((resolve) => setTimeout(() => resolve(fetchMockedData), 5000))
     );
 
-    const { debug, getAllByTestId, getByTestId } = render(<Home />);
+    const { debug, getAllByTestId, getByTestId } = render(
+      <MemoryRouter keyLength={0}>
+        <Home />
+      </MemoryRouter>
+    );
 
     // Users wrapper is correctly rendered
     const home = await waitFor(() => getByTestId('home'));
@@ -66,7 +75,11 @@ describe('Home page component', () => {
   it('should properly display users on successful fetch', async () => {
     axios.get.mockImplementationOnce(() => Promise.resolve(fetchMockedData));
 
-    const { getAllByTestId, getByTestId } = render(<Home />);
+    const { getAllByTestId, getByTestId } = render(
+      <MemoryRouter keyLength={0}>
+        <Home />
+      </MemoryRouter>
+    );
 
     // Users wrapper is correctly rendered
     const home = await waitFor(() => getByTestId('home'));

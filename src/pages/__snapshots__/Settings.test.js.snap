@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings component should correctly render the settings page 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Settings>
+      <div
+        className="w-full h-full"
+      >
+        <div
+          className="z-10 w-full border-b-4 flex border-blue-500 bg-primary"
+        >
+          <Link
+            to="/"
+          >
+            <LinkAnchor
+              href="/"
+              navigate={[Function]}
+            >
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                <FontAwesomeIcon
+                  border={false}
+                  className="m-4 transform cursor-pointer duration-200 hover:scale-110 hover:text-red-600 z-20"
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Object {
+                      "icon": Array [
+                        448,
+                        512,
+                        Array [],
+                        "f060",
+                        "M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z",
+                      ],
+                      "iconName": "arrow-left",
+                      "prefix": "fas",
+                    }
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size="2x"
+                  spin={false}
+                  swapOpacity={false}
+                  symbol={false}
+                  title=""
+                  transform={null}
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-arrow-left fa-w-14 fa-2x m-4 transform cursor-pointer duration-200 hover:scale-110 hover:text-red-600 z-20"
+                    data-icon="arrow-left"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </FontAwesomeIcon>
+              </a>
+            </LinkAnchor>
+          </Link>
+        </div>
+        <NationalityOptionsGrid>
+          <div
+            className="p-4 max-w-md m-auto"
+          >
+            <div
+              className="my-12 sm:my-20 text-center"
+            >
+              Select the nationalities you would like to filter
+              <br />
+              <div
+                className="text-sm"
+              >
+                (CH,ES,FR)
+              </div>
+            </div>
+            <div
+              className="grid grid-cols-2 justify-between items-center m-auto col-gap-4 row-gap-12"
+              style={
+                Object {
+                  "justifyItems": "center",
+                }
+              }
+            >
+              <NationalityOptionCard
+                isSelected={true}
+                nationality="CH"
+              >
+                <div
+                  className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+                  data-testid="nationality-CH"
+                >
+                  <svg
+                    className="h-12 w-12 md:h-24 md:w-24"
+                    version="1.1"
+                    viewBox="0 0 512 512"
+                    xmlSpace="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      fill="#D80027"
+                      height="512"
+                      width="512"
+                    />
+                    <polygon
+                      fill="#F0F0F0"
+                      points="395.13,209.624 302.377,209.624 302.377,116.87 209.623,116.87 209.623,209.624   116.87,209.624 116.87,302.377 209.623,302.377 209.623,395.13 302.377,395.13 302.377,302.377 395.13,302.377 "
+                    />
+                  </svg>
+                  <span
+                    className="mt-4"
+                  >
+                    CH
+                  </span>
+                </div>
+              </NationalityOptionCard>
+              <NationalityOptionCard
+                isSelected={true}
+                nationality="ES"
+              >
+                <div
+                  className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+                  data-testid="nationality-ES"
+                >
+                  <svg
+                    className="h-12 w-12 md:h-24 md:w-24"
+                    version="1.1"
+                    viewBox="0 0 512 512"
+                    xmlSpace="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      fill="#FFDA44"
+                      height="512"
+                      width="512"
+                    />
+                    <g>
+                      <rect
+                        fill="#D80027"
+                        height="170.663"
+                        width="512"
+                      />
+                      <rect
+                        fill="#D80027"
+                        height="170.663"
+                        width="512"
+                        y="341.337"
+                      />
+                    </g>
+                  </svg>
+                  <span
+                    className="mt-4"
+                  >
+                    ES
+                  </span>
+                </div>
+              </NationalityOptionCard>
+              <NationalityOptionCard
+                isSelected={false}
+                nationality="BR"
+              >
+                <div
+                  className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 hover:scale-110 hover:rounded-md border-blue-500"
+                  data-testid="nationality-BR"
+                >
+                  <svg
+                    className="h-12 w-12 md:h-24 md:w-24"
+                    version="1.1"
+                    viewBox="0 0 512 512"
+                    xmlSpace="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      fill="#F0F0F0"
+                      height="512"
+                      width="512"
+                    />
+                    <polygon
+                      fill="#D80027"
+                      points="0,304 208,304 208,512 304,512 304,304 512,304 512,208 304,208 304,0 208,0 208,208 0,208   "
+                    />
+                    <g>
+                      <polygon
+                        fill="#0052B4"
+                        points="406.92,333.913 512,438.993 512,333.913  "
+                      />
+                      <polygon
+                        fill="#0052B4"
+                        points="333.913,333.913 512,512 512,461.64 384.273,333.913  "
+                      />
+                      <polygon
+                        fill="#0052B4"
+                        points="464.564,512 333.913,381.336 333.913,512  "
+                      />
+                    </g>
+                    <polygon
+                      fill="#F0F0F0"
+                      points="333.913,333.913 512,512 512,461.64 384.273,333.913 "
+                    />
+                    <polygon
+                      fill="#D80027"
+                      points="333.913,333.913 512,512 512,461.64 384.273,333.913 "
+                    />
+                    <g>
+                      <polygon
+                        fill="#0052B4"
+                        points="80.302,333.913 0,414.215 0,333.913  "
+                      />
+                      <polygon
+                        fill="#0052B4"
+                        points="178.084,356.559 178.084,511.997 22.658,511.997  "
+                      />
+                    </g>
+                    <polygon
+                      fill="#D80027"
+                      points="127.724,333.916 0,461.641 0,512 0,512 178.084,333.916 "
+                    />
+                    <g>
+                      <polygon
+                        fill="#0052B4"
+                        points="105.08,178.087 0,73.007 0,178.087  "
+                      />
+                      <polygon
+                        fill="#0052B4"
+                        points="178.087,178.087 0,0 0,50.36 127.727,178.087  "
+                      />
+                      <polygon
+                        fill="#0052B4"
+                        points="47.436,0 178.087,130.663 178.087,0  "
+                      />
+                    </g>
+                    <polygon
+                      fill="#F0F0F0"
+                      points="178.087,178.087 0,0 0,50.36 127.727,178.087 "
+                    />
+                    <polygon
+                      fill="#D80027"
+                      points="178.087,178.087 0,0 0,50.36 127.727,178.087 "
+                    />
+                    <g>
+                      <polygon
+                        fill="#0052B4"
+                        points="431.698,178.087 512,97.785 512,178.087  "
+                      />
+                      <polygon
+                        fill="#0052B4"
+                        points="333.916,155.441 333.916,0.003 489.342,0.003  "
+                      />
+                    </g>
+                    <polygon
+                      fill="#D80027"
+                      points="384.276,178.084 512,50.359 512,0 512,0 333.916,178.084 "
+                    />
+                  </svg>
+                  <span
+                    className="mt-4"
+                  >
+                    BR
+                  </span>
+                </div>
+              </NationalityOptionCard>
+              <NationalityOptionCard
+                isSelected={true}
+                nationality="FR"
+              >
+                <div
+                  className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+                  data-testid="nationality-FR"
+                >
+                  <svg
+                    className="h-12 w-12 md:h-24 md:w-24"
+                    version="1.1"
+                    viewBox="0 0 512 512"
+                    xmlSpace="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      fill="#F0F0F0"
+                      height="512"
+                      width="512"
+                    />
+                    <rect
+                      fill="#0052B4"
+                      height="512"
+                      width="170.663"
+                    />
+                    <rect
+                      fill="#D80027"
+                      height="512"
+                      width="170.663"
+                      x="341.337"
+                    />
+                  </svg>
+                  <span
+                    className="mt-4"
+                  >
+                    FR
+                  </span>
+                </div>
+              </NationalityOptionCard>
+            </div>
+          </div>
+        </NationalityOptionsGrid>
+      </div>
+    </Settings>
+  </Router>
+</MemoryRouter>
+`;
