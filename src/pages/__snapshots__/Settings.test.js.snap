@@ -36,7 +36,9 @@ exports[`Settings component should correctly render the settings page 1`] = `
       }
     }
   >
-    <Settings>
+    <Settings
+      selectedNationalities={Array []}
+    >
       <div
         className="w-full h-full"
       >
@@ -107,19 +109,22 @@ exports[`Settings component should correctly render the settings page 1`] = `
             </LinkAnchor>
           </Link>
         </div>
-        <NationalityOptionsGrid>
+        <NationalityOptionsGrid
+          selectedNationalities={Array []}
+        >
           <div
             className="p-4 max-w-md m-auto"
           >
             <div
-              className="my-12 sm:my-20 text-center"
+              className="h-24 sm:h-12 my-6 sm:my-12 sm:my-20 text-center"
+              data-testid="options-grid-message"
             >
-              Select the nationalities you would like to filter
+              Filter your users by nationalies.
               <br />
               <div
                 className="text-sm"
               >
-                (CH,ES,FR)
+                If no nationalities are selected no filter will be applied
               </div>
             </div>
             <div
@@ -131,18 +136,19 @@ exports[`Settings component should correctly render the settings page 1`] = `
               }
             >
               <NationalityOptionCard
-                isSelected={true}
+                isSelected={false}
+                key="CH"
                 nationality="CH"
               >
-                <div
-                  className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+                <button
+                  className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
                   data-testid="nationality-CH"
+                  onClick={[Function]}
+                  type="button"
                 >
                   <svg
-                    className="h-12 w-12 md:h-24 md:w-24"
-                    version="1.1"
+                    className="h-12 w-12 sm:h-24 sm:w-24"
                     viewBox="0 0 512 512"
-                    xmlSpace="preserve"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <rect
@@ -160,21 +166,22 @@ exports[`Settings component should correctly render the settings page 1`] = `
                   >
                     CH
                   </span>
-                </div>
+                </button>
               </NationalityOptionCard>
               <NationalityOptionCard
-                isSelected={true}
+                isSelected={false}
+                key="ES"
                 nationality="ES"
               >
-                <div
-                  className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+                <button
+                  className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
                   data-testid="nationality-ES"
+                  onClick={[Function]}
+                  type="button"
                 >
                   <svg
-                    className="h-12 w-12 md:h-24 md:w-24"
-                    version="1.1"
+                    className="h-12 w-12 sm:h-24 sm:w-24"
                     viewBox="0 0 512 512"
-                    xmlSpace="preserve"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <rect
@@ -201,21 +208,22 @@ exports[`Settings component should correctly render the settings page 1`] = `
                   >
                     ES
                   </span>
-                </div>
+                </button>
               </NationalityOptionCard>
               <NationalityOptionCard
                 isSelected={false}
+                key="BR"
                 nationality="BR"
               >
-                <div
-                  className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 hover:scale-110 hover:rounded-md border-blue-500"
+                <button
+                  className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
                   data-testid="nationality-BR"
+                  onClick={[Function]}
+                  type="button"
                 >
                   <svg
-                    className="h-12 w-12 md:h-24 md:w-24"
-                    version="1.1"
+                    className="h-12 w-12 sm:h-24 sm:w-24"
                     viewBox="0 0 512 512"
-                    xmlSpace="preserve"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <rect
@@ -305,21 +313,22 @@ exports[`Settings component should correctly render the settings page 1`] = `
                   >
                     BR
                   </span>
-                </div>
+                </button>
               </NationalityOptionCard>
               <NationalityOptionCard
-                isSelected={true}
+                isSelected={false}
+                key="FR"
                 nationality="FR"
               >
-                <div
-                  className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+                <button
+                  className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
                   data-testid="nationality-FR"
+                  onClick={[Function]}
+                  type="button"
                 >
                   <svg
-                    className="h-12 w-12 md:h-24 md:w-24"
-                    version="1.1"
+                    className="h-12 w-12 sm:h-24 sm:w-24"
                     viewBox="0 0 512 512"
-                    xmlSpace="preserve"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <rect
@@ -344,7 +353,7 @@ exports[`Settings component should correctly render the settings page 1`] = `
                   >
                     FR
                   </span>
-                </div>
+                </button>
               </NationalityOptionCard>
             </div>
           </div>

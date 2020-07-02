@@ -1,19 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NationalityOptionCard component should correctly render the BRITISH nationality option card 1`] = `
+exports[`NationalityOptionCard component on BRITISH nationality option card should correctly render and call add nationality action on click 1`] = `
 <NationalityOptionCard
+  addNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+        Array [
+          "BR",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   isSelected={false}
   nationality="BR"
+  removeNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
-  <div
-    className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 hover:scale-110 hover:rounded-md border-blue-500"
+  <button
+    className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
     data-testid="nationality-BR"
+    onClick={[Function]}
+    type="button"
   >
     <svg
-      className="h-12 w-12 md:h-24 md:w-24"
-      version="1.1"
+      className="h-12 w-12 sm:h-24 sm:w-24"
       viewBox="0 0 512 512"
-      xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect
@@ -103,24 +140,68 @@ exports[`NationalityOptionCard component should correctly render the BRITISH nat
     >
       BR
     </span>
-  </div>
+  </button>
 </NationalityOptionCard>
 `;
 
-exports[`NationalityOptionCard component should correctly render the BRITISH nationality option card when selected 1`] = `
+exports[`NationalityOptionCard component on BRITISH nationality option card should correctly render when selected and call remove nationallity action on click 1`] = `
 <NationalityOptionCard
+  addNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+        Array [
+          "BR",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   isSelected={true}
   nationality="BR"
+  removeNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+        Array [
+          "BR",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
-  <div
-    className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+  <button
+    className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
     data-testid="nationality-BR"
+    onClick={[Function]}
+    type="button"
   >
     <svg
-      className="h-12 w-12 md:h-24 md:w-24"
-      version="1.1"
+      className="h-12 w-12 sm:h-24 sm:w-24"
       viewBox="0 0 512 512"
-      xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect
@@ -210,24 +291,75 @@ exports[`NationalityOptionCard component should correctly render the BRITISH nat
     >
       BR
     </span>
-  </div>
+  </button>
 </NationalityOptionCard>
 `;
 
-exports[`NationalityOptionCard component should correctly render the FRENCH nationality option card 1`] = `
+exports[`NationalityOptionCard component on FRENCH nationality option card should correctly render and call add nationality action on click 1`] = `
 <NationalityOptionCard
+  addNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+        Array [
+          "BR",
+        ],
+        Array [
+          "FR",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   isSelected={false}
   nationality="FR"
+  removeNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+        Array [
+          "BR",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
-  <div
-    className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 hover:scale-110 hover:rounded-md border-blue-500"
+  <button
+    className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
     data-testid="nationality-FR"
+    onClick={[Function]}
+    type="button"
   >
     <svg
-      className="h-12 w-12 md:h-24 md:w-24"
-      version="1.1"
+      className="h-12 w-12 sm:h-24 sm:w-24"
       viewBox="0 0 512 512"
-      xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect
@@ -252,24 +384,82 @@ exports[`NationalityOptionCard component should correctly render the FRENCH nati
     >
       FR
     </span>
-  </div>
+  </button>
 </NationalityOptionCard>
 `;
 
-exports[`NationalityOptionCard component should correctly render the FRENCH nationality option card when selected 1`] = `
+exports[`NationalityOptionCard component on FRENCH nationality option card should correctly render when selected and call remove nationallity action on click 1`] = `
 <NationalityOptionCard
+  addNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+        Array [
+          "BR",
+        ],
+        Array [
+          "FR",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   isSelected={true}
   nationality="FR"
+  removeNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+        Array [
+          "BR",
+        ],
+        Array [
+          "FR",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
-  <div
-    className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+  <button
+    className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
     data-testid="nationality-FR"
+    onClick={[Function]}
+    type="button"
   >
     <svg
-      className="h-12 w-12 md:h-24 md:w-24"
-      version="1.1"
+      className="h-12 w-12 sm:h-24 sm:w-24"
       viewBox="0 0 512 512"
-      xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect
@@ -294,24 +484,89 @@ exports[`NationalityOptionCard component should correctly render the FRENCH nati
     >
       FR
     </span>
-  </div>
+  </button>
 </NationalityOptionCard>
 `;
 
-exports[`NationalityOptionCard component should correctly render the SPANISH nationality option card 1`] = `
+exports[`NationalityOptionCard component on SPANISH nationality option card should correctly render and call add nationality action on click 1`] = `
 <NationalityOptionCard
+  addNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+        Array [
+          "BR",
+        ],
+        Array [
+          "FR",
+        ],
+        Array [
+          "ES",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   isSelected={false}
   nationality="ES"
+  removeNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+        Array [
+          "BR",
+        ],
+        Array [
+          "FR",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
-  <div
-    className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 hover:scale-110 hover:rounded-md border-blue-500"
+  <button
+    className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
     data-testid="nationality-ES"
+    onClick={[Function]}
+    type="button"
   >
     <svg
-      className="h-12 w-12 md:h-24 md:w-24"
-      version="1.1"
+      className="h-12 w-12 sm:h-24 sm:w-24"
       viewBox="0 0 512 512"
-      xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect
@@ -338,24 +593,96 @@ exports[`NationalityOptionCard component should correctly render the SPANISH nat
     >
       ES
     </span>
-  </div>
+  </button>
 </NationalityOptionCard>
 `;
 
-exports[`NationalityOptionCard component should correctly render the SPANISH nationality option card when selected 1`] = `
+exports[`NationalityOptionCard component on SPANISH nationality option card should correctly render when selected and call remove nationallity action on click 1`] = `
 <NationalityOptionCard
+  addNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+        Array [
+          "BR",
+        ],
+        Array [
+          "FR",
+        ],
+        Array [
+          "ES",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   isSelected={true}
   nationality="ES"
+  removeNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+        Array [
+          "BR",
+        ],
+        Array [
+          "FR",
+        ],
+        Array [
+          "ES",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
-  <div
-    className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+  <button
+    className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
     data-testid="nationality-ES"
+    onClick={[Function]}
+    type="button"
   >
     <svg
-      className="h-12 w-12 md:h-24 md:w-24"
-      version="1.1"
+      className="h-12 w-12 sm:h-24 sm:w-24"
       viewBox="0 0 512 512"
-      xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect
@@ -382,24 +709,40 @@ exports[`NationalityOptionCard component should correctly render the SPANISH nat
     >
       ES
     </span>
-  </div>
+  </button>
 </NationalityOptionCard>
 `;
 
-exports[`NationalityOptionCard component should correctly render the SWISS nationality option card 1`] = `
+exports[`NationalityOptionCard component on SWISS nationality option card should correctly render and call add nationality action on click 1`] = `
 <NationalityOptionCard
+  addNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   isSelected={false}
   nationality="CH"
+  removeNationality={[MockFunction]}
 >
-  <div
-    className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 hover:scale-110 hover:rounded-md border-blue-500"
+  <button
+    className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
     data-testid="nationality-CH"
+    onClick={[Function]}
+    type="button"
   >
     <svg
-      className="h-12 w-12 md:h-24 md:w-24"
-      version="1.1"
+      className="h-12 w-12 sm:h-24 sm:w-24"
       viewBox="0 0 512 512"
-      xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect
@@ -417,24 +760,54 @@ exports[`NationalityOptionCard component should correctly render the SWISS natio
     >
       CH
     </span>
-  </div>
+  </button>
 </NationalityOptionCard>
 `;
 
-exports[`NationalityOptionCard component should correctly render the SWISS nationality option card when selected 1`] = `
+exports[`NationalityOptionCard component on SWISS nationality option card should correctly render when selected and call remove nationallity action on click 1`] = `
 <NationalityOptionCard
+  addNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
   isSelected={true}
   nationality="CH"
+  removeNationality={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "CH",
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
-  <div
-    className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+  <button
+    className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
     data-testid="nationality-CH"
+    onClick={[Function]}
+    type="button"
   >
     <svg
-      className="h-12 w-12 md:h-24 md:w-24"
-      version="1.1"
+      className="h-12 w-12 sm:h-24 sm:w-24"
       viewBox="0 0 512 512"
-      xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <rect
@@ -452,6 +825,6 @@ exports[`NationalityOptionCard component should correctly render the SWISS natio
     >
       CH
     </span>
-  </div>
+  </button>
 </NationalityOptionCard>
 `;

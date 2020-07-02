@@ -2,10 +2,15 @@
 import React, { useState, useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from 'axios';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { UserPreview, Spinner } from '../components';
+
+const mapStateToProps = (state) => ({
+  selectedNationalities: state.nationalities,
+});
 
 export const PAGE_SIZE = 50;
 
@@ -38,8 +43,9 @@ const FetchErrorMEssage = () => (
  * It retrieves the users from the https://randomuser.me API and renders the a grid
  * It makes use of infinite scrolling to load more users
  * It provides a search in order to filter results by first and last name
+ * @param {Object} selectedNationalities - An array with the currently nationalities filter
  */
-const Home = () => {
+export const Home = ({ selectedNationalities }) => {
   const [state, setState] = useState({
     users: [],
     pageNumber: 1,
@@ -48,10 +54,10 @@ const Home = () => {
   });
 
   const { users, pageNumber, hasMore, error } = state;
-
+  const nationalityFilter = selectedNationalities.length ? `nat=${selectedNationalities}&` : '';
   const loadUsers = () => {
     axios
-      .get(`https://randomuser.me/api/?page=${pageNumber}&results=${PAGE_SIZE}`)
+      .get(`https://randomuser.me/api/?${nationalityFilter}page=${pageNumber}&results=${PAGE_SIZE}`)
       .then(({ data: { results: newUsers } }) => {
         setState({
           // Adding new users to the list
@@ -77,7 +83,6 @@ const Home = () => {
     loadUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   return (
     <div data-testid="home">
       <div
@@ -114,4 +119,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default connect(mapStateToProps)(Home);

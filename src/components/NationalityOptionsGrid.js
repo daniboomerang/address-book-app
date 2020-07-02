@@ -1,44 +1,39 @@
-import React, { useState } from 'react';
-import { SWISS, SPANISH, BRITISH, FRENCH } from '../constants';
+import React from 'react';
+import { NATIONALITIES } from '../constants';
 import NationalityOptionCard from './NationalityOptionCard';
 
 /**
  * It renders a grid with the different nationality option cards
  */
-const NationalityOptionsGrid = () => {
-  const [selectedNationalities] = useState([SWISS, SPANISH, FRENCH]);
-
-  return (
-    <div className="p-4 max-w-md m-auto">
-      <div className="my-12 sm:my-20 text-center">
-        Select the nationalities you would like to filter
-        <br />
-        <div className="text-sm">{`(${selectedNationalities.toString()})`}</div>
-      </div>
-
-      <div
-        className="grid grid-cols-2 justify-between items-center m-auto col-gap-4 row-gap-12"
-        style={{ justifyItems: 'center' }}
-      >
-        <NationalityOptionCard
-          nationality={SWISS}
-          isSelected={selectedNationalities.includes(SWISS)}
-        />
-        <NationalityOptionCard
-          nationality={SPANISH}
-          isSelected={selectedNationalities.includes(SPANISH)}
-        />
-        <NationalityOptionCard
-          nationality={BRITISH}
-          isSelected={selectedNationalities.includes(BRITISH)}
-        />
-        <NationalityOptionCard
-          nationality={FRENCH}
-          isSelected={selectedNationalities.includes(FRENCH)}
-        />
-      </div>
+const NationalityOptionsGrid = ({ selectedNationalities, actions }) => (
+  <div className="p-4 max-w-md m-auto">
+    <div
+      data-testid="options-grid-message"
+      className="h-24 sm:h-12 my-6 sm:my-12 sm:my-20 text-center"
+    >
+      Filter your users by nationalies.
+      {selectedNationalities.length === 0 && (
+        <>
+          <br />
+          <div className="text-sm">If no nationalities are selected no filter will be applied</div>
+        </>
+      )}
     </div>
-  );
-};
+
+    <div
+      className="grid grid-cols-2 justify-between items-center m-auto col-gap-4 row-gap-12"
+      style={{ justifyItems: 'center' }}
+    >
+      {NATIONALITIES.map((nationality) => (
+        <NationalityOptionCard
+          key={nationality}
+          nationality={nationality}
+          isSelected={selectedNationalities.includes(nationality)}
+          {...actions}
+        />
+      ))}
+    </div>
+  </div>
+);
 
 export default NationalityOptionsGrid;

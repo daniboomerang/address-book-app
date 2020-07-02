@@ -5,15 +5,18 @@ import { SWISS, SPANISH, BRITISH } from '../constants';
 /**
  * @param {string} nationality - The different nationality options -> CH, ES, BR or FR
  * @param {boolean} isSelected - Whether the options shall be deisplayed as selected
+ * @param {Function} addNationality - Action to add a new nationality to store
+ * @param {Function} removeNationality - Action to remove a new nationality from store
  */
-const NationalityOptionCard = ({ nationality, isSelected }) => {
+const NationalityOptionCard = ({ nationality, isSelected, addNationality, removeNationality }) => {
+  const handleAddNationality = () => addNationality(nationality);
+  const handleRemoveNationality = () => removeNationality(nationality);
   const svgProps = {
-    className: 'h-12 w-12 md:h-24 md:w-24',
+    className: 'h-12 w-12 sm:h-24 sm:w-24',
     xmlns: 'http://www.w3.org/2000/svg',
-    version: '1.1',
     viewBox: '0 0 512 512',
-    xmlSpace: 'preserve',
   };
+
   const renderFlag = () => {
     if (nationality === BRITISH) {
       return (
@@ -86,19 +89,21 @@ const NationalityOptionCard = ({ nationality, isSelected }) => {
   };
 
   return (
-    <div
+    <button
+      type="button"
       data-testid={`nationality-${nationality}`}
+      onClick={isSelected ? handleRemoveNationality : handleAddNationality}
       className={cx(
-        'grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32',
+        'focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32',
         {
-          'border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500': isSelected,
-          'hover:scale-110 hover:rounded-md border-blue-500': !isSelected,
+          'border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500': isSelected,
+          'hover:rounded-md border-blue-500': !isSelected,
         }
       )}
     >
       {renderFlag()}
       <span className="mt-4">{nationality}</span>
-    </div>
+    </button>
   );
 };
 

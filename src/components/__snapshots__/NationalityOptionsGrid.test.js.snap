@@ -1,20 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NationalityOptionsGrid component should correctly render all nationality option cards 1`] = `
-<NationalityOptionsGrid>
+exports[`NationalityOptionsGrid component should correctly render the grid when nationalities filter applied 1`] = `
+<NationalityOptionsGrid
+  selectedNationalities={
+    Array [
+      "CH",
+      "ES",
+      "BR",
+      "FR",
+    ]
+  }
+>
   <div
     className="p-4 max-w-md m-auto"
   >
     <div
-      className="my-12 sm:my-20 text-center"
+      className="h-24 sm:h-12 my-6 sm:my-12 sm:my-20 text-center"
+      data-testid="options-grid-message"
     >
-      Select the nationalities you would like to filter
-      <br />
-      <div
-        className="text-sm"
-      >
-        (CH,ES,FR)
-      </div>
+      Filter your users by nationalies.
     </div>
     <div
       className="grid grid-cols-2 justify-between items-center m-auto col-gap-4 row-gap-12"
@@ -26,17 +30,18 @@ exports[`NationalityOptionsGrid component should correctly render all nationalit
     >
       <NationalityOptionCard
         isSelected={true}
+        key="CH"
         nationality="CH"
       >
-        <div
-          className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+        <button
+          className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
           data-testid="nationality-CH"
+          onClick={[Function]}
+          type="button"
         >
           <svg
-            className="h-12 w-12 md:h-24 md:w-24"
-            version="1.1"
+            className="h-12 w-12 sm:h-24 sm:w-24"
             viewBox="0 0 512 512"
-            xmlSpace="preserve"
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect
@@ -54,21 +59,22 @@ exports[`NationalityOptionsGrid component should correctly render all nationalit
           >
             CH
           </span>
-        </div>
+        </button>
       </NationalityOptionCard>
       <NationalityOptionCard
         isSelected={true}
+        key="ES"
         nationality="ES"
       >
-        <div
-          className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+        <button
+          className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
           data-testid="nationality-ES"
+          onClick={[Function]}
+          type="button"
         >
           <svg
-            className="h-12 w-12 md:h-24 md:w-24"
-            version="1.1"
+            className="h-12 w-12 sm:h-24 sm:w-24"
             viewBox="0 0 512 512"
-            xmlSpace="preserve"
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect
@@ -95,21 +101,22 @@ exports[`NationalityOptionsGrid component should correctly render all nationalit
           >
             ES
           </span>
-        </div>
+        </button>
       </NationalityOptionCard>
       <NationalityOptionCard
-        isSelected={false}
+        isSelected={true}
+        key="BR"
         nationality="BR"
       >
-        <div
-          className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 hover:scale-110 hover:rounded-md border-blue-500"
+        <button
+          className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
           data-testid="nationality-BR"
+          onClick={[Function]}
+          type="button"
         >
           <svg
-            className="h-12 w-12 md:h-24 md:w-24"
-            version="1.1"
+            className="h-12 w-12 sm:h-24 sm:w-24"
             viewBox="0 0 512 512"
-            xmlSpace="preserve"
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect
@@ -199,21 +206,22 @@ exports[`NationalityOptionsGrid component should correctly render all nationalit
           >
             BR
           </span>
-        </div>
+        </button>
       </NationalityOptionCard>
       <NationalityOptionCard
         isSelected={true}
+        key="FR"
         nationality="FR"
       >
-        <div
-          className="grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 md:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:scale-100 hover:border-blue-500"
+        <button
+          className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
           data-testid="nationality-FR"
+          onClick={[Function]}
+          type="button"
         >
           <svg
-            className="h-12 w-12 md:h-24 md:w-24"
-            version="1.1"
+            className="h-12 w-12 sm:h-24 sm:w-24"
             viewBox="0 0 512 512"
-            xmlSpace="preserve"
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect
@@ -238,7 +246,259 @@ exports[`NationalityOptionsGrid component should correctly render all nationalit
           >
             FR
           </span>
-        </div>
+        </button>
+      </NationalityOptionCard>
+    </div>
+  </div>
+</NationalityOptionsGrid>
+`;
+
+exports[`NationalityOptionsGrid component should correctly render the grid when no nationalities filter applied 1`] = `
+<NationalityOptionsGrid
+  selectedNationalities={Array []}
+>
+  <div
+    className="p-4 max-w-md m-auto"
+  >
+    <div
+      className="h-24 sm:h-12 my-6 sm:my-12 sm:my-20 text-center"
+      data-testid="options-grid-message"
+    >
+      Filter your users by nationalies.
+      <br />
+      <div
+        className="text-sm"
+      >
+        If no nationalities are selected no filter will be applied
+      </div>
+    </div>
+    <div
+      className="grid grid-cols-2 justify-between items-center m-auto col-gap-4 row-gap-12"
+      style={
+        Object {
+          "justifyItems": "center",
+        }
+      }
+    >
+      <NationalityOptionCard
+        isSelected={false}
+        key="CH"
+        nationality="CH"
+      >
+        <button
+          className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
+          data-testid="nationality-CH"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="h-12 w-12 sm:h-24 sm:w-24"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              fill="#D80027"
+              height="512"
+              width="512"
+            />
+            <polygon
+              fill="#F0F0F0"
+              points="395.13,209.624 302.377,209.624 302.377,116.87 209.623,116.87 209.623,209.624   116.87,209.624 116.87,302.377 209.623,302.377 209.623,395.13 302.377,395.13 302.377,302.377 395.13,302.377 "
+            />
+          </svg>
+          <span
+            className="mt-4"
+          >
+            CH
+          </span>
+        </button>
+      </NationalityOptionCard>
+      <NationalityOptionCard
+        isSelected={false}
+        key="ES"
+        nationality="ES"
+      >
+        <button
+          className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
+          data-testid="nationality-ES"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="h-12 w-12 sm:h-24 sm:w-24"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              fill="#FFDA44"
+              height="512"
+              width="512"
+            />
+            <g>
+              <rect
+                fill="#D80027"
+                height="170.663"
+                width="512"
+              />
+              <rect
+                fill="#D80027"
+                height="170.663"
+                width="512"
+                y="341.337"
+              />
+            </g>
+          </svg>
+          <span
+            className="mt-4"
+          >
+            ES
+          </span>
+        </button>
+      </NationalityOptionCard>
+      <NationalityOptionCard
+        isSelected={false}
+        key="BR"
+        nationality="BR"
+      >
+        <button
+          className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
+          data-testid="nationality-BR"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="h-12 w-12 sm:h-24 sm:w-24"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              fill="#F0F0F0"
+              height="512"
+              width="512"
+            />
+            <polygon
+              fill="#D80027"
+              points="0,304 208,304 208,512 304,512 304,304 512,304 512,208 304,208 304,0 208,0 208,208 0,208   "
+            />
+            <g>
+              <polygon
+                fill="#0052B4"
+                points="406.92,333.913 512,438.993 512,333.913  "
+              />
+              <polygon
+                fill="#0052B4"
+                points="333.913,333.913 512,512 512,461.64 384.273,333.913  "
+              />
+              <polygon
+                fill="#0052B4"
+                points="464.564,512 333.913,381.336 333.913,512  "
+              />
+            </g>
+            <polygon
+              fill="#F0F0F0"
+              points="333.913,333.913 512,512 512,461.64 384.273,333.913 "
+            />
+            <polygon
+              fill="#D80027"
+              points="333.913,333.913 512,512 512,461.64 384.273,333.913 "
+            />
+            <g>
+              <polygon
+                fill="#0052B4"
+                points="80.302,333.913 0,414.215 0,333.913  "
+              />
+              <polygon
+                fill="#0052B4"
+                points="178.084,356.559 178.084,511.997 22.658,511.997  "
+              />
+            </g>
+            <polygon
+              fill="#D80027"
+              points="127.724,333.916 0,461.641 0,512 0,512 178.084,333.916 "
+            />
+            <g>
+              <polygon
+                fill="#0052B4"
+                points="105.08,178.087 0,73.007 0,178.087  "
+              />
+              <polygon
+                fill="#0052B4"
+                points="178.087,178.087 0,0 0,50.36 127.727,178.087  "
+              />
+              <polygon
+                fill="#0052B4"
+                points="47.436,0 178.087,130.663 178.087,0  "
+              />
+            </g>
+            <polygon
+              fill="#F0F0F0"
+              points="178.087,178.087 0,0 0,50.36 127.727,178.087 "
+            />
+            <polygon
+              fill="#D80027"
+              points="178.087,178.087 0,0 0,50.36 127.727,178.087 "
+            />
+            <g>
+              <polygon
+                fill="#0052B4"
+                points="431.698,178.087 512,97.785 512,178.087  "
+              />
+              <polygon
+                fill="#0052B4"
+                points="333.916,155.441 333.916,0.003 489.342,0.003  "
+              />
+            </g>
+            <polygon
+              fill="#D80027"
+              points="384.276,178.084 512,50.359 512,0 512,0 333.916,178.084 "
+            />
+          </svg>
+          <span
+            className="mt-4"
+          >
+            BR
+          </span>
+        </button>
+      </NationalityOptionCard>
+      <NationalityOptionCard
+        isSelected={false}
+        key="FR"
+        nationality="FR"
+      >
+        <button
+          className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
+          data-testid="nationality-FR"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="h-12 w-12 sm:h-24 sm:w-24"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              fill="#F0F0F0"
+              height="512"
+              width="512"
+            />
+            <rect
+              fill="#0052B4"
+              height="512"
+              width="170.663"
+            />
+            <rect
+              fill="#D80027"
+              height="512"
+              width="170.663"
+              x="341.337"
+            />
+          </svg>
+          <span
+            className="mt-4"
+          >
+            FR
+          </span>
+        </button>
       </NationalityOptionCard>
     </div>
   </div>

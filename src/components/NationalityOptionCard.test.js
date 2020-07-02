@@ -6,83 +6,127 @@ import { SWISS, SPANISH, BRITISH, FRENCH } from '../constants';
 describe('NationalityOptionCard component', () => {
   let wrapper;
 
-  it('should correctly render the SWISS nationality option card', () => {
-    wrapper = mount(<NationalityOptionCard nationality={SWISS} isSelected={false} />);
+  const actionProps = {
+    addNationality: jest.fn(),
+    removeNationality: jest.fn(),
+  };
 
-    expect(wrapper.find(`div[data-testid="nationality-${SWISS}"]`).length).toBe(1);
-    expect(wrapper.find('.border-blue-500').length).toBe(1);
+  describe('on SWISS nationality option card', () => {
+    it('should correctly render and call add nationality action on click', () => {
+      wrapper = mount(
+        <NationalityOptionCard nationality={SWISS} isSelected={false} {...actionProps} />
+      );
 
-    expect(wrapper).toMatchSnapshot();
+      expect(wrapper.find(`button[data-testid="nationality-${SWISS}"]`).length).toBe(1);
+      expect(wrapper.find('.border-blue-500').length).toBe(1);
+      wrapper.find(`button[data-testid="nationality-${SWISS}"]`).simulate('click');
+      expect(actionProps.addNationality).toHaveBeenCalledWith(SWISS);
+
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should correctly render when selected and call remove nationallity action on click', () => {
+      wrapper = mount(<NationalityOptionCard nationality={SWISS} isSelected {...actionProps} />);
+
+      expect(wrapper.find(`button[data-testid="nationality-${SWISS}"]`).length).toBe(1);
+      expect(wrapper.find('.border-blue-500').length).toBe(0);
+      expect(wrapper.find('.text-red-600').length).toBe(1);
+      expect(wrapper.find('.border-red-600').length).toBe(1);
+
+      wrapper.find(`button[data-testid="nationality-${SWISS}"]`).simulate('click');
+      expect(actionProps.removeNationality).toHaveBeenCalledWith(SWISS);
+
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
-  it('should correctly render the SWISS nationality option card when selected', () => {
-    wrapper = mount(<NationalityOptionCard nationality={SWISS} isSelected />);
+  describe('on BRITISH nationality option card', () => {
+    it('should correctly render and call add nationality action on click', () => {
+      wrapper = mount(
+        <NationalityOptionCard nationality={BRITISH} isSelected={false} {...actionProps} />
+      );
 
-    expect(wrapper.find(`div[data-testid="nationality-${SWISS}"]`).length).toBe(1);
-    expect(wrapper.find('.border-blue-500').length).toBe(0);
-    expect(wrapper.find('.text-red-600').length).toBe(1);
-    expect(wrapper.find('.border-red-600').length).toBe(1);
+      expect(wrapper.find(`button[data-testid="nationality-${BRITISH}"]`).length).toBe(1);
+      expect(wrapper.find('.border-blue-500').length).toBe(1);
 
-    expect(wrapper).toMatchSnapshot();
+      wrapper.find(`button[data-testid="nationality-${BRITISH}"]`).simulate('click');
+      expect(actionProps.addNationality).toHaveBeenCalledWith(BRITISH);
+
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should correctly render when selected and call remove nationallity action on click', () => {
+      wrapper = mount(<NationalityOptionCard nationality={BRITISH} isSelected {...actionProps} />);
+
+      expect(wrapper.find(`button[data-testid="nationality-${BRITISH}"]`).length).toBe(1);
+      expect(wrapper.find('.border-blue-500').length).toBe(0);
+      expect(wrapper.find('.text-red-600').length).toBe(1);
+      expect(wrapper.find('.border-red-600').length).toBe(1);
+
+      wrapper.find(`button[data-testid="nationality-${BRITISH}"]`).simulate('click');
+      expect(actionProps.removeNationality).toHaveBeenCalledWith(BRITISH);
+
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
-  it('should correctly render the BRITISH nationality option card', () => {
-    wrapper = mount(<NationalityOptionCard nationality={BRITISH} isSelected={false} />);
+  describe('on FRENCH nationality option card', () => {
+    it('should correctly render and call add nationality action on click', () => {
+      wrapper = mount(
+        <NationalityOptionCard nationality={FRENCH} isSelected={false} {...actionProps} />
+      );
 
-    expect(wrapper.find(`div[data-testid="nationality-${BRITISH}"]`).length).toBe(1);
-    expect(wrapper.find('.border-blue-500').length).toBe(1);
+      expect(wrapper.find(`button[data-testid="nationality-${FRENCH}"]`).length).toBe(1);
+      expect(wrapper.find('.border-blue-500').length).toBe(1);
 
-    expect(wrapper).toMatchSnapshot();
+      wrapper.find(`button[data-testid="nationality-${FRENCH}"]`).simulate('click');
+      expect(actionProps.addNationality).toHaveBeenCalledWith(FRENCH);
+
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should correctly render when selected and call remove nationallity action on click', () => {
+      wrapper = mount(<NationalityOptionCard nationality={FRENCH} isSelected {...actionProps} />);
+
+      expect(wrapper.find(`button[data-testid="nationality-${FRENCH}"]`).length).toBe(1);
+      expect(wrapper.find('.border-blue-500').length).toBe(0);
+      expect(wrapper.find('.text-red-600').length).toBe(1);
+      expect(wrapper.find('.border-red-600').length).toBe(1);
+
+      wrapper.find(`button[data-testid="nationality-${FRENCH}"]`).simulate('click');
+      expect(actionProps.removeNationality).toHaveBeenCalledWith(FRENCH);
+
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
-  it('should correctly render the BRITISH nationality option card when selected', () => {
-    wrapper = mount(<NationalityOptionCard nationality={BRITISH} isSelected />);
+  describe('on SPANISH nationality option card', () => {
+    it('should correctly render and call add nationality action on click', () => {
+      wrapper = mount(
+        <NationalityOptionCard nationality={SPANISH} isSelected={false} {...actionProps} />
+      );
 
-    expect(wrapper.find(`div[data-testid="nationality-${BRITISH}"]`).length).toBe(1);
-    expect(wrapper.find('.border-blue-500').length).toBe(0);
-    expect(wrapper.find('.text-red-600').length).toBe(1);
-    expect(wrapper.find('.border-red-600').length).toBe(1);
+      expect(wrapper.find(`button[data-testid="nationality-${SPANISH}"]`).length).toBe(1);
+      expect(wrapper.find('.border-blue-500').length).toBe(1);
 
-    expect(wrapper).toMatchSnapshot();
-  });
+      wrapper.find(`button[data-testid="nationality-${SPANISH}"]`).simulate('click');
+      expect(actionProps.addNationality).toHaveBeenCalledWith(SPANISH);
 
-  it('should correctly render the FRENCH nationality option card', () => {
-    wrapper = mount(<NationalityOptionCard nationality={FRENCH} isSelected={false} />);
+      expect(wrapper).toMatchSnapshot();
+    });
 
-    expect(wrapper.find(`div[data-testid="nationality-${FRENCH}"]`).length).toBe(1);
-    expect(wrapper.find('.border-blue-500').length).toBe(1);
+    it('should correctly render when selected and call remove nationallity action on click', () => {
+      wrapper = mount(<NationalityOptionCard nationality={SPANISH} isSelected {...actionProps} />);
 
-    expect(wrapper).toMatchSnapshot();
-  });
+      expect(wrapper.find(`button[data-testid="nationality-${SPANISH}"]`).length).toBe(1);
+      expect(wrapper.find('.border-blue-500').length).toBe(0);
+      expect(wrapper.find('.text-red-600').length).toBe(1);
+      expect(wrapper.find('.border-red-600').length).toBe(1);
 
-  it('should correctly render the FRENCH nationality option card when selected', () => {
-    wrapper = mount(<NationalityOptionCard nationality={FRENCH} isSelected />);
+      wrapper.find(`button[data-testid="nationality-${SPANISH}"]`).simulate('click');
+      expect(actionProps.removeNationality).toHaveBeenCalledWith(SPANISH);
 
-    expect(wrapper.find(`div[data-testid="nationality-${FRENCH}"]`).length).toBe(1);
-    expect(wrapper.find('.border-blue-500').length).toBe(0);
-    expect(wrapper.find('.text-red-600').length).toBe(1);
-    expect(wrapper.find('.border-red-600').length).toBe(1);
-
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should correctly render the SPANISH nationality option card', () => {
-    wrapper = mount(<NationalityOptionCard nationality={SPANISH} isSelected={false} />);
-
-    expect(wrapper.find(`div[data-testid="nationality-${SPANISH}"]`).length).toBe(1);
-    expect(wrapper.find('.border-blue-500').length).toBe(1);
-
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should correctly render the SPANISH nationality option card when selected', () => {
-    wrapper = mount(<NationalityOptionCard nationality={SPANISH} isSelected />);
-
-    expect(wrapper.find(`div[data-testid="nationality-${SPANISH}"]`).length).toBe(1);
-    expect(wrapper.find('.border-blue-500').length).toBe(0);
-    expect(wrapper.find('.text-red-600').length).toBe(1);
-    expect(wrapper.find('.border-red-600').length).toBe(1);
-
-    expect(wrapper).toMatchSnapshot();
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 });

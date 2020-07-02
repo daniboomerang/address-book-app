@@ -1,14 +1,26 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import * as NationalityActions from '../actions';
 import NationalityOptionsGrid from '../components/NationalityOptionsGrid';
+
+const mapStateToProps = (state) => ({
+  selectedNationalities: state.nationalities,
+});
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators(NationalityActions, dispatch),
+});
 
 /**
  * Adreess book settings page
  * It renders the different nationality options for users fetching
+ * @param {Object} selectedNationalities - An array with the currently nationalities filter
+ * @param {Object} actions - Object with ADD_NATIONALITY and REMOVE_NATIONALITY redux actions
  */
-const Settings = () => (
+export const Settings = (props) => (
   <div className="w-full h-full">
     <div className="z-10 w-full border-b-4 flex border-blue-500 bg-primary">
       <Link to="/">
@@ -20,8 +32,8 @@ const Settings = () => (
         />
       </Link>
     </div>
-    <NationalityOptionsGrid />
+    <NationalityOptionsGrid {...props} />
   </div>
 );
 
-export default Settings;
+export default connect(mapStateToProps, mapDispatchToProps)(Settings);

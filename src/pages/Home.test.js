@@ -4,7 +4,8 @@ import { render, cleanup, waitFor } from '@testing-library/react';
 import axios from 'axios';
 import { fetchMockedData, usersMockedData } from '../__mocks__/mocked-data';
 import { MemoryRouter } from 'react-router-dom';
-import Home, { PAGE_SIZE } from './Home';
+import { Home, PAGE_SIZE } from './Home';
+import { NATIONALITIES } from '../constants';
 
 jest.mock('axios');
 jest.mock('../components/UserPreview', () => ({ user }) => {
@@ -25,12 +26,12 @@ describe('Home page component', () => {
     cleanup();
   });
 
-  it('should properly display users on fetch error', async () => {
+  it('should properly display error message on fetch error', async () => {
     axios.get.mockImplementationOnce(() => Promise.reject({ message: 'errorMessage' }));
 
     const { getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
-        <Home />
+        <Home selectedNationalities={[]} />
       </MemoryRouter>
     );
 
@@ -58,7 +59,7 @@ describe('Home page component', () => {
 
     const { debug, getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
-        <Home />
+        <Home selectedNationalities={[]} />
       </MemoryRouter>
     );
 
@@ -77,7 +78,7 @@ describe('Home page component', () => {
 
     const { getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
-        <Home />
+        <Home selectedNationalities={[]} />
       </MemoryRouter>
     );
 
@@ -96,6 +97,33 @@ describe('Home page component', () => {
     expect(axios.get).toHaveBeenCalledTimes(1);
     expect(axios.get).toHaveBeenCalledWith(
       `https://randomuser.me/api/?page=1&results=${PAGE_SIZE}`
+    );
+  });
+
+  it('should properly display users with nationalities filter', async () => {
+    axios.get.mockImplementationOnce(() => Promise.resolve(fetchMockedData));
+
+    const { getAllByTestId, getByTestId } = render(
+      <MemoryRouter keyLength={0}>
+        <Home selectedNationalities={NATIONALITIES} />
+      </MemoryRouter>
+    );
+
+    // Users wrapper is correctly rendered
+    const home = await waitFor(() => getByTestId('home'));
+    expect(home).toBeDefined();
+
+    // Users are correctly rendered
+    const users = getAllByTestId('user');
+
+    for (let i = 0; i < usersMockedData.length; i++) {
+      expect(users[i].textContent).toBe(usersMockedData[i].name.first);
+    }
+
+    // Axios is correctly invoked
+    expect(axios.get).toHaveBeenCalledTimes(1);
+    expect(axios.get).toHaveBeenCalledWith(
+      `https://randomuser.me/api/?nat=${NATIONALITIES}&page=1&results=${PAGE_SIZE}`
     );
   });
 });
