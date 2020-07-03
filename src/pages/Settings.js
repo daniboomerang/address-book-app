@@ -22,7 +22,7 @@ const mapDispatchToProps = (dispatch) => ({
  */
 export const Settings = (props) => (
   <div className="w-full h-full">
-    <div className="z-10 w-full border-b-4 flex border-blue-500 bg-primary">
+    <div className="w-full flex">
       <Link to="/">
         <FontAwesomeIcon
           className="m-4 transform cursor-pointer duration-200 hover:scale-110 hover:text-red-600 z-20"

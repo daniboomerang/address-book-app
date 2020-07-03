@@ -1,4 +1,5 @@
 import UserPreview from './UserPreview';
 import Spinner from './Spinner';
+import AlertMessage from './AlertMessage';
 
-export { UserPreview, Spinner };
+export { AlertMessage, UserPreview, Spinner };

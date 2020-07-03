@@ -1,18 +1,34 @@
-/* eslint-disable no-undef */
 import React, { useState, useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import { UserPreview, Spinner } from '../components';
-
-const mapStateToProps = (state) => ({
-  selectedNationalities: state.nationalities,
-});
+import filterUsers from '../lib/filteringUtils';
+import { UserPreview, Spinner, AlertMessage } from '../components';
 
 export const PAGE_SIZE = 50;
+const MAX_CATALOGUE_SIZE = 1000;
+
+/**
+ * InfiniteScroll end message node
+ * @param {boolean} isFilterApplied - Whether results are already filtered
+ * @param {boolean} withResults - Whether there are results at all or not
+ */
+const renderEndMessage = (isFilterApplied, withResults) => {
+  let message;
+
+  if (isFilterApplied && withResults) {
+    message = 'Remove filter to retrieve more users';
+  } else if (isFilterApplied && !withResults) {
+    message = 'No results';
+  } else {
+    message = 'End of users catalogue';
+  }
+
+  return <p className="text-center p-4 m-12">{message}</p>;
+};
 
 /** InfiniteScroll loader node */
 const Loader = (
@@ -21,22 +37,9 @@ const Loader = (
   </div>
 );
 
-/** InfiniteScroll end message node */
-const EndCatalogueMessage = <p className="text-center p-4 mb-8">End of users catalogue</p>;
-
-/** Alert message displayed at the top of the page on fetch error */
-const FetchErrorMEssage = () => (
-  <div
-    data-testid="fetch-error-message"
-    className="z-10 border-t-4 bg-primary border-red-600 text-center py-2 lg:px-4 fixed bottom-0 left-0 w-full"
-  >
-    <div className="font-semibold text-red-600 px-4 text-center flex-auto">
-      Error retrieving contacts.
-      <br />
-      Refresh if the problem persists.
-    </div>
-  </div>
-);
+const mapStateToProps = (state) => ({
+  selectedNationalities: state.nationalities,
+});
 
 /**
  * Adreess book home page
@@ -51,21 +54,27 @@ export const Home = ({ selectedNationalities }) => {
     pageNumber: 1,
     hasMore: true,
     error: '',
+    searchFilter: '',
   });
 
-  const { users, pageNumber, hasMore, error } = state;
-  const nationalityFilter = selectedNationalities.length ? `nat=${selectedNationalities}&` : '';
+  const { users, pageNumber, hasMore, error, searchFilter } = state;
+
+  // It fetches users from randomuser API
   const loadUsers = () => {
+    // Buulding up the nationality API parameter
+    const nationalityFilter = selectedNationalities.length ? `nat=${selectedNationalities}&` : '';
+
     axios
       .get(`https://randomuser.me/api/?${nationalityFilter}page=${pageNumber}&results=${PAGE_SIZE}`)
       .then(({ data: { results: newUsers } }) => {
         setState({
+          ...state,
           // Adding new users to the list
           users: [...users, ...newUsers],
           // Updating page numbers
           pageNumber: pageNumber + 1,
-          // Updating hasMore after last fetch
-          hasMore: users.length < 1000,
+          // Updating hasMore after last fetch. Substract PAGE_SIZE due to the first loading
+          hasMore: users.length < MAX_CATALOGUE_SIZE - PAGE_SIZE,
           // Removing error state
           error: '',
         });
@@ -78,41 +87,87 @@ export const Home = ({ selectedNationalities }) => {
       });
   };
 
+  // We load users after FIRST effect
   useEffect(() => {
     // Use effect for loading users
     loadUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  /** HANDLERS */
+  // It updates the search search name filter
+  const handleSearchFilterChange = (e) => {
+    e.preventDefault();
+    setState({ ...state, searchFilter: e.target.value });
+  };
+
+  // It cleans the search filter
+  const handleRemoveFilter = () => setState({ ...state, searchFilter: '' });
+
+  // Handle user first/last name filtering
+  const filteredUsers = filterUsers(users, searchFilter);
+  const isFilterApplied = searchFilter.length > 0;
+  const areThereResults = filteredUsers.length > 0;
+
+  // Randomuser.me does not support filtering by user name so
+  // we pause the loading mechanism while the filter is active
+  const blockFetch = hasMore && !isFilterApplied;
+
   return (
     <div data-testid="home">
-      <div
-        data-testid="header"
-        className="z-10 fixed w-full border-b-4 flex border-blue-500 bg-primary"
-      >
+      <header data-testid="header" className="z-10 fixed w-full flex bg-primary py-2 items-center">
         <Link to="/settings">
           <FontAwesomeIcon
             className="m-4 transform cursor-pointer duration-200 hover:scale-110 hover:text-red-600 z-20"
             icon={faBars}
-            fixedWidth={false}
             size="2x"
           />
         </Link>
-      </div>
+        <form className="absolute border-b-4 border-blue-500 mx-auto inset-x-0 text-center w-48 sm:w-64 h-16 flex items-center justify-center">
+          <input
+            type="text"
+            name="search"
+            className=" focus:outline-none text-center placeholder-blue-500 bg-primary relative"
+            placeholder="Filter first or last name"
+            onChange={handleSearchFilterChange}
+            value={searchFilter}
+          />
+          {isFilterApplied && (
+            <FontAwesomeIcon
+              className="absolute right-0 mr-2 transform cursor-pointer duration-200 hover:scale-110 hover:text-red-600 absolute"
+              icon={faTimes}
+              size="1x"
+              onClick={handleRemoveFilter}
+            />
+          )}
+        </form>
+      </header>
       <InfiniteScroll
-        dataLength={users.length}
+        dataLength={filteredUsers.length}
         next={loadUsers}
-        hasMore={hasMore}
+        hasMore={blockFetch}
         loader={Loader}
-        endMessage={EndCatalogueMessage}
+        endMessage={renderEndMessage(isFilterApplied, areThereResults)}
       >
         <div
           data-testid="users-grid"
-          className="m-auto px-4 sm:px-8 xs:pt-8 4sm:px-12 max-w-xs sm:max-w-lg pt-16 sm:pt-24"
+          className="m-auto px-4 sm:px-8 xs:pt-8 4sm:px-12 max-w-xs sm:max-w-lg pt-16 sm:pt-20"
         >
-          {error.length > 0 && <FetchErrorMEssage />}
-          {users.map((user) => (
+          {areThereResults && (
+            <div className="my-8 text-center text-xs">
+              {`${filteredUsers.length} result${filteredUsers.length > 1 ? 's' : ''}`}
+            </div>
+          )}
+          {filteredUsers.map((user) => (
             <UserPreview key={user.email + user.login.username} user={user} />
           ))}
+          {error.length > 0 && (
+            <AlertMessage>
+              Error retrieving contacts.
+              <br />
+              Refresh if the problem persists.
+            </AlertMessage>
+          )}
         </div>
       </InfiniteScroll>
     </div>

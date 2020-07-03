@@ -9,7 +9,7 @@ exports[`UserPreview component should render correctly 1`] = `
         "age": 70,
         "date": "1950-02-27T16:49:15.705Z",
       },
-      "email": "simon.petersen@example.com",
+      "email": "simmon.martin@example.com",
       "gender": "male",
       "id": Object {
         "name": "CPR",
@@ -43,8 +43,8 @@ exports[`UserPreview component should render correctly 1`] = `
         "uuid": "dca63e13-5a76-4d7a-aea1-817919275f83",
       },
       "name": Object {
-        "first": "Simon",
-        "last": "Petersen",
+        "first": "Simmon",
+        "last": "Martin",
         "title": "Mr",
       },
       "nat": "DK",
@@ -63,7 +63,7 @@ exports[`UserPreview component should render correctly 1`] = `
 >
   <div
     className="w-full block sm:flex border-4 text-center border-light my-6 transform cursor-pointer duration-200 hover:scale-110 border-blue-500"
-    data-testid="user-simon.petersen@example.com"
+    data-testid="user-simmon.martin@example.com"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
@@ -89,15 +89,15 @@ exports[`UserPreview component should render correctly 1`] = `
       >
         <span
           className="mr-1"
-          data-testid="Simon"
+          data-testid="Simmon"
         >
-          Simon
+          Simmon
         </span>
         <span
           className="ml-1"
-          data-testid="Petersen"
+          data-testid="Martin"
         >
-          Petersen
+          Martin
         </span>
       </div>
       <div
@@ -108,9 +108,9 @@ exports[`UserPreview component should render correctly 1`] = `
       </div>
       <div
         className="my-1 text-sm mb-4"
-        data-testid="simon.petersen@example.com"
+        data-testid="simmon.martin@example.com"
       >
-        simon.petersen@example.com
+        simmon.martin@example.com
       </div>
     </div>
   </div>
@@ -126,7 +126,7 @@ exports[`UserPreview component should transition from blue to red color on hover
         "age": 70,
         "date": "1950-02-27T16:49:15.705Z",
       },
-      "email": "simon.petersen@example.com",
+      "email": "simmon.martin@example.com",
       "gender": "male",
       "id": Object {
         "name": "CPR",
@@ -160,8 +160,8 @@ exports[`UserPreview component should transition from blue to red color on hover
         "uuid": "dca63e13-5a76-4d7a-aea1-817919275f83",
       },
       "name": Object {
-        "first": "Simon",
-        "last": "Petersen",
+        "first": "Simmon",
+        "last": "Martin",
         "title": "Mr",
       },
       "nat": "DK",
@@ -180,7 +180,7 @@ exports[`UserPreview component should transition from blue to red color on hover
 >
   <div
     className="w-full block sm:flex border-4 text-center border-light my-6 transform cursor-pointer duration-200 hover:scale-110 border-red-600 text-red-600 rounded-md"
-    data-testid="user-simon.petersen@example.com"
+    data-testid="user-simmon.martin@example.com"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
@@ -206,15 +206,15 @@ exports[`UserPreview component should transition from blue to red color on hover
       >
         <span
           className="mr-1"
-          data-testid="Simon"
+          data-testid="Simmon"
         >
-          Simon
+          Simmon
         </span>
         <span
           className="ml-1"
-          data-testid="Petersen"
+          data-testid="Martin"
         >
-          Petersen
+          Martin
         </span>
       </div>
       <div
@@ -225,9 +225,9 @@ exports[`UserPreview component should transition from blue to red color on hover
       </div>
       <div
         className="my-1 text-sm mb-4"
-        data-testid="simon.petersen@example.com"
+        data-testid="simmon.martin@example.com"
       >
-        simon.petersen@example.com
+        simmon.martin@example.com
       </div>
     </div>
   </div>

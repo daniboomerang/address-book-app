@@ -43,7 +43,7 @@ exports[`Settings component should correctly render the settings page 1`] = `
         className="w-full h-full"
       >
         <div
-          className="z-10 w-full border-b-4 flex border-blue-500 bg-primary"
+          className="w-full flex"
         >
           <Link
             to="/"

@@ -1,7 +1,7 @@
 export const usersMockedData = [
   {
     gender: 'male',
-    name: { title: 'Mr', first: 'Simon', last: 'Petersen' },
+    name: { title: 'Mr', first: 'Simmon', last: 'Martin' },
     location: {
       street: { number: 3865, name: 'Gormsvej' },
       city: 'Tisvilde',
@@ -11,7 +11,7 @@ export const usersMockedData = [
       coordinates: { latitude: '-27.4297', longitude: '-37.0144' },
       timezone: { offset: '+4:00', description: 'Abu Dhabi, Muscat, Baku, Tbilisi' },
     },
-    email: 'simon.petersen@example.com',
+    email: 'simmon.martin@example.com',
     login: {
       uuid: 'dca63e13-5a76-4d7a-aea1-817919275f83',
       username: 'purplebird556',
