@@ -38,16 +38,16 @@ exports[`Not found page component should render correctly 1`] = `
   >
     <NotFound>
       <div
-        className="flex justify-center min-h-screen"
+        className="flex justify-center min-h-screen text-blue-500"
       >
         <div
-          className="w-full md:w-1/2 bg-white flex items-center justify-center"
+          className="w-full flex items-center justify-center"
         >
           <div
             className="max-w-sm m-8"
           >
             <div
-              className="text-black text-5xl md:text-15xl font-black"
+              className="text-5xl md:text-15xl font-black"
             >
               404
             </div>
@@ -55,22 +55,76 @@ exports[`Not found page component should render correctly 1`] = `
               className="w-16 h-1 bg-purple-light my-3 md:my-6"
             />
             <p
-              className="text-grey-darker text-2xl md:text-3xl font-light mb-8 leading-normal"
+              className="text-grey-darker text-2xl md:text-3xl font-light mb-8 leading-normal items-center flex"
             >
-              Sorry, the page you are looking for could not be found.
+              <span>
+                Sorry, the page you are looking for could not be found...
+              </span>
+              <FontAwesomeIcon
+                border={false}
+                className=""
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Object {
+                    "icon": Array [
+                      512,
+                      512,
+                      Array [],
+                      "f7a9",
+                      "M473.7 73.8l-2.4-2.5c-46-47-118-51.7-169.6-14.8L336 159.9l-96 64 48 128-144-144 96-64-28.6-86.5C159.7 19.6 87 24 40.7 71.4l-2.4 2.4C-10.4 123.6-12.5 202.9 31 256l212.1 218.6c7.1 7.3 18.6 7.3 25.7 0L481 255.9c43.5-53 41.4-132.3-7.3-182.1z",
+                    ],
+                    "iconName": "heart-broken",
+                    "prefix": "fas",
+                  }
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size="2x"
+                spin={false}
+                swapOpacity={false}
+                symbol={false}
+                title=""
+                transform={null}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-heart-broken fa-w-16 fa-2x "
+                  data-icon="heart-broken"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M473.7 73.8l-2.4-2.5c-46-47-118-51.7-169.6-14.8L336 159.9l-96 64 48 128-144-144 96-64-28.6-86.5C159.7 19.6 87 24 40.7 71.4l-2.4 2.4C-10.4 123.6-12.5 202.9 31 256l212.1 218.6c7.1 7.3 18.6 7.3 25.7 0L481 255.9c43.5-53 41.4-132.3-7.3-182.1z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </FontAwesomeIcon>
             </p>
             <Link
+              className="transform duration-200 underline hover:text-red-600"
               to="/"
             >
               <LinkAnchor
+                className="transform duration-200 underline hover:text-red-600"
                 href="/"
                 navigate={[Function]}
               >
                 <a
+                  className="transform duration-200 underline hover:text-red-600"
                   href="/"
                   onClick={[Function]}
                 >
-                  Go home page
+                  Go to home page
                 </a>
               </LinkAnchor>
             </Link>
