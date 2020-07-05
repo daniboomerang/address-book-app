@@ -7,8 +7,8 @@ import cx from 'classnames';
  */
 const UserPreview = ({ user }) => {
   const [isHovered, setHovered] = useState(false);
-  const handleMouseEnter = (): void => setHovered(true);
-  const handleMouseLeave = (): void => setHovered(false);
+  const handleMouseEnter = () => setHovered(true);
+  const handleMouseLeave = () => setHovered(false);
 
   const {
     name: { first: firstName, last: lastName },

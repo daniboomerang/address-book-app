@@ -1,0 +1,1893 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersList component should render correctly the list of users 1`] = `
+<UsersList
+  users={
+    Array [
+      Object {
+        "cell": "88592966",
+        "dob": Object {
+          "age": 70,
+          "date": "1950-02-27T16:49:15.705Z",
+        },
+        "email": "simmon.martin@example.com",
+        "gender": "male",
+        "id": Object {
+          "name": "CPR",
+          "value": "270250-8357",
+        },
+        "location": Object {
+          "city": "Tisvilde",
+          "coordinates": Object {
+            "latitude": "-27.4297",
+            "longitude": "-37.0144",
+          },
+          "country": "Denmark",
+          "postcode": 28816,
+          "state": "Danmark",
+          "street": Object {
+            "name": "Gormsvej",
+            "number": 3865,
+          },
+          "timezone": Object {
+            "description": "Abu Dhabi, Muscat, Baku, Tbilisi",
+            "offset": "+4:00",
+          },
+        },
+        "login": Object {
+          "md5": "ac3673267c4606e6fa5f754047d57a4a",
+          "password": "testibil",
+          "salt": "uPCA1DOi",
+          "sha1": "c1e2a5b2e2daa5020a02b4ba54bc8881b4233b6c",
+          "sha256": "4797c6d5a893a92bccca7b09cb8c19381d909389bbfeab3a6a9ec07bc8503b23",
+          "username": "purplebird556",
+          "uuid": "dca63e13-5a76-4d7a-aea1-817919275f83",
+        },
+        "name": Object {
+          "first": "Simmon",
+          "last": "Martin",
+          "title": "Mr",
+        },
+        "nat": "DK",
+        "phone": "05143951",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/men/59.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/men/59.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/men/59.jpg",
+        },
+        "registered": Object {
+          "age": 10,
+          "date": "2010-10-27T11:48:05.160Z",
+        },
+      },
+      Object {
+        "cell": "045-891-39-73",
+        "dob": Object {
+          "age": 34,
+          "date": "1986-09-27T06:06:51.382Z",
+        },
+        "email": "lilja.jokela@example.com",
+        "gender": "female",
+        "id": Object {
+          "name": "HETU",
+          "value": "NaNNA006undefined",
+        },
+        "location": Object {
+          "city": "Keminmaa",
+          "coordinates": Object {
+            "latitude": "64.2460",
+            "longitude": "136.8692",
+          },
+          "country": "Finland",
+          "postcode": 43533,
+          "state": "Ostrobothnia",
+          "street": Object {
+            "name": "Pispalan Valtatie",
+            "number": 7548,
+          },
+          "timezone": Object {
+            "description": "Brazil, Buenos Aires, Georgetown",
+            "offset": "-3:00",
+          },
+        },
+        "login": Object {
+          "md5": "2b09bc4c28288d00a2b18dac7f76de44",
+          "password": "autumn",
+          "salt": "UKKs7HYq",
+          "sha1": "de5cff136b4edfeb353ed3950f8276089cc9d79b",
+          "sha256": "a673bbd39e3adc7ccec88ce2d19ed24b0cc53d1e1e852c15dcfbd37ce5d8c367",
+          "username": "crazyleopard483",
+          "uuid": "8e3fabe6-8b6b-4736-9c94-75b994f8d414",
+        },
+        "name": Object {
+          "first": "Lilja",
+          "last": "Jokela",
+          "title": "Mrs",
+        },
+        "nat": "FI",
+        "phone": "04-844-011",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/women/38.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/38.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/38.jpg",
+        },
+        "registered": Object {
+          "age": 4,
+          "date": "2016-07-20T20:43:33.792Z",
+        },
+      },
+      Object {
+        "cell": "081-894-8456",
+        "dob": Object {
+          "age": 55,
+          "date": "1965-08-23T18:45:56.510Z",
+        },
+        "email": "elizabeth.fitzsimmons@example.com",
+        "gender": "female",
+        "id": Object {
+          "name": "PPS",
+          "value": "5705495T",
+        },
+        "location": Object {
+          "city": "Carrigtwohill",
+          "coordinates": Object {
+            "latitude": "3.9870",
+            "longitude": "-26.4752",
+          },
+          "country": "Ireland",
+          "postcode": 43719,
+          "state": "Monaghan",
+          "street": Object {
+            "name": "Galway Road",
+            "number": 8029,
+          },
+          "timezone": Object {
+            "description": "Kabul",
+            "offset": "+4:30",
+          },
+        },
+        "login": Object {
+          "md5": "ef83c24de3ed16772a5f8f9b2129361f",
+          "password": "genius",
+          "salt": "LZlhnrZf",
+          "sha1": "bbc1d6fff8914a7db416e287826f010919f34fa4",
+          "sha256": "271756af4be4c0d534ab2a4d3e2b1f5208063e5e067eaa94b0eaca02fd4e2581",
+          "username": "whitebird629",
+          "uuid": "cd65d771-329c-4f25-ac50-1cad545ac23b",
+        },
+        "name": Object {
+          "first": "Elizabeth",
+          "last": "Fitzsimmons",
+          "title": "Miss",
+        },
+        "nat": "IE",
+        "phone": "051-825-5109",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/women/92.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/92.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/92.jpg",
+        },
+        "registered": Object {
+          "age": 11,
+          "date": "2009-02-01T18:49:44.676Z",
+        },
+      },
+      Object {
+        "cell": "(824)-718-6927",
+        "dob": Object {
+          "age": 49,
+          "date": "1971-06-03T09:42:12.926Z",
+        },
+        "email": "grace.hayes@example.com",
+        "gender": "female",
+        "id": Object {
+          "name": "SSN",
+          "value": "542-75-2315",
+        },
+        "location": Object {
+          "city": "Honolulu",
+          "coordinates": Object {
+            "latitude": "-22.5618",
+            "longitude": "36.5461",
+          },
+          "country": "United States",
+          "postcode": 70240,
+          "state": "Virginia",
+          "street": Object {
+            "name": "Railroad St",
+            "number": 8886,
+          },
+          "timezone": Object {
+            "description": "Beijing, Perth, Singapore, Hong Kong",
+            "offset": "+8:00",
+          },
+        },
+        "login": Object {
+          "md5": "b51539121dab80fa3e2ada0cc3167c9d",
+          "password": "paulie",
+          "salt": "FqaoRps6",
+          "sha1": "00b9218d0778b2eb07470691830698a5d318a747",
+          "sha256": "fc8a46a0156e03e570fc3389e76c2dce3c7d6768b470be7ef4715d8467713522",
+          "username": "ticklishfrog920",
+          "uuid": "d3134d16-e196-46fa-a498-21eef7d78a9c",
+        },
+        "name": Object {
+          "first": "Grace",
+          "last": "Hayes",
+          "title": "Ms",
+        },
+        "nat": "US",
+        "phone": "(841)-092-9021",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/women/33.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/33.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/33.jpg",
+        },
+        "registered": Object {
+          "age": 18,
+          "date": "2002-09-17T15:44:05.886Z",
+        },
+      },
+      Object {
+        "cell": "(12) 8149-3353",
+        "dob": Object {
+          "age": 47,
+          "date": "1973-02-08T23:44:08.300Z",
+        },
+        "email": "dioclecia.campos@example.com",
+        "gender": "female",
+        "id": Object {
+          "name": "",
+          "value": null,
+        },
+        "location": Object {
+          "city": "Maracanaú",
+          "coordinates": Object {
+            "latitude": "-77.8314",
+            "longitude": "10.5344",
+          },
+          "country": "Brazil",
+          "postcode": 34040,
+          "state": "Rondônia",
+          "street": Object {
+            "name": "Rua Pernambuco ",
+            "number": 2003,
+          },
+          "timezone": Object {
+            "description": "Beijing, Perth, Singapore, Hong Kong",
+            "offset": "+8:00",
+          },
+        },
+        "login": Object {
+          "md5": "99cd9a47f8379db73808f23de608fc7f",
+          "password": "spread",
+          "salt": "8Gx3wYi5",
+          "sha1": "b7432a33c95357c03a4aeae311346d1e2ef7da35",
+          "sha256": "b95c97745c194505db96b236d3931ae2d0275ffdb8982144411c10ec2470db47",
+          "username": "organicpanda259",
+          "uuid": "7f8fc56b-dea6-4ea8-803b-44ead5e705d6",
+        },
+        "name": Object {
+          "first": "Dioclécia",
+          "last": "Campos",
+          "title": "Ms",
+        },
+        "nat": "BR",
+        "phone": "(47) 2714-2607",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/women/82.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/82.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/82.jpg",
+        },
+        "registered": Object {
+          "age": 12,
+          "date": "2008-09-10T23:20:06.420Z",
+        },
+      },
+      Object {
+        "cell": "0964-916-8118",
+        "dob": Object {
+          "age": 65,
+          "date": "1955-02-04T21:44:15.732Z",
+        },
+        "email": "mlyn.rdyy@example.com",
+        "gender": "female",
+        "id": Object {
+          "name": "",
+          "value": null,
+        },
+        "location": Object {
+          "city": "بوشهر",
+          "coordinates": Object {
+            "latitude": "-63.7699",
+            "longitude": "-151.3513",
+          },
+          "country": "Iran",
+          "postcode": 80968,
+          "state": "آذربایجان غربی",
+          "street": Object {
+            "name": "میدان فلسطین",
+            "number": 986,
+          },
+          "timezone": Object {
+            "description": "Newfoundland",
+            "offset": "-3:30",
+          },
+        },
+        "login": Object {
+          "md5": "ba4c2e3baf53034f3ae83d6232bcdfe1",
+          "password": "sluggo",
+          "salt": "qdbuA3WR",
+          "sha1": "649c083f0e63627ff63629e51945cb3a0d69785d",
+          "sha256": "c0cfa9ce2940dcbfdc56857095473a966768a5a81d3e33bf2ab06b8655ed90df",
+          "username": "angryfrog283",
+          "uuid": "e3f042d3-6b3c-49f3-b963-c845381e31bd",
+        },
+        "name": Object {
+          "first": "ملینا",
+          "last": "رضایی",
+          "title": "Miss",
+        },
+        "nat": "IR",
+        "phone": "011-61653559",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/women/11.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/11.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/11.jpg",
+        },
+        "registered": Object {
+          "age": 5,
+          "date": "2015-01-08T21:12:58.291Z",
+        },
+      },
+      Object {
+        "cell": "0784-023-762",
+        "dob": Object {
+          "age": 29,
+          "date": "1991-07-20T02:55:40.967Z",
+        },
+        "email": "victor.martin@example.com",
+        "gender": "male",
+        "id": Object {
+          "name": "NINO",
+          "value": "WE 53 03 85 P",
+        },
+        "location": Object {
+          "city": "Newport",
+          "coordinates": Object {
+            "latitude": "-53.9545",
+            "longitude": "2.4196",
+          },
+          "country": "United Kingdom",
+          "postcode": "WC6 7AY",
+          "state": "Gloucestershire",
+          "street": Object {
+            "name": "King Street",
+            "number": 5285,
+          },
+          "timezone": Object {
+            "description": "Mountain Time (US & Canada)",
+            "offset": "-7:00",
+          },
+        },
+        "login": Object {
+          "md5": "8a3811df3c7197002c846adf97c54602",
+          "password": "james1",
+          "salt": "ALrBE392",
+          "sha1": "b10c7f84287a086f896d4eb4664ab9b52647806a",
+          "sha256": "545aaae2958c475411c3aa40c0d84a7c02d69a0345b8f5a652dcdf2e63961af5",
+          "username": "bigfish956",
+          "uuid": "8c4f85e5-d2ed-49b2-85d6-b4b274a1b24e",
+        },
+        "name": Object {
+          "first": "Victor",
+          "last": "Martin",
+          "title": "Mr",
+        },
+        "nat": "GB",
+        "phone": "015242 81119",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/men/68.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/men/68.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/men/68.jpg",
+        },
+        "registered": Object {
+          "age": 14,
+          "date": "2006-07-20T17:49:47.026Z",
+        },
+      },
+    ]
+  }
+>
+  <div
+    data-testid="user-preview-wrapper"
+    key="simmon.martin@example.compurplebird556"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "88592966",
+          "dob": Object {
+            "age": 70,
+            "date": "1950-02-27T16:49:15.705Z",
+          },
+          "email": "simmon.martin@example.com",
+          "gender": "male",
+          "id": Object {
+            "name": "CPR",
+            "value": "270250-8357",
+          },
+          "location": Object {
+            "city": "Tisvilde",
+            "coordinates": Object {
+              "latitude": "-27.4297",
+              "longitude": "-37.0144",
+            },
+            "country": "Denmark",
+            "postcode": 28816,
+            "state": "Danmark",
+            "street": Object {
+              "name": "Gormsvej",
+              "number": 3865,
+            },
+            "timezone": Object {
+              "description": "Abu Dhabi, Muscat, Baku, Tbilisi",
+              "offset": "+4:00",
+            },
+          },
+          "login": Object {
+            "md5": "ac3673267c4606e6fa5f754047d57a4a",
+            "password": "testibil",
+            "salt": "uPCA1DOi",
+            "sha1": "c1e2a5b2e2daa5020a02b4ba54bc8881b4233b6c",
+            "sha256": "4797c6d5a893a92bccca7b09cb8c19381d909389bbfeab3a6a9ec07bc8503b23",
+            "username": "purplebird556",
+            "uuid": "dca63e13-5a76-4d7a-aea1-817919275f83",
+          },
+          "name": Object {
+            "first": "Simmon",
+            "last": "Martin",
+            "title": "Mr",
+          },
+          "nat": "DK",
+          "phone": "05143951",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/men/59.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/59.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/59.jpg",
+          },
+          "registered": Object {
+            "age": 10,
+            "date": "2010-10-27T11:48:05.160Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="lilja.jokela@example.comcrazyleopard483"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "045-891-39-73",
+          "dob": Object {
+            "age": 34,
+            "date": "1986-09-27T06:06:51.382Z",
+          },
+          "email": "lilja.jokela@example.com",
+          "gender": "female",
+          "id": Object {
+            "name": "HETU",
+            "value": "NaNNA006undefined",
+          },
+          "location": Object {
+            "city": "Keminmaa",
+            "coordinates": Object {
+              "latitude": "64.2460",
+              "longitude": "136.8692",
+            },
+            "country": "Finland",
+            "postcode": 43533,
+            "state": "Ostrobothnia",
+            "street": Object {
+              "name": "Pispalan Valtatie",
+              "number": 7548,
+            },
+            "timezone": Object {
+              "description": "Brazil, Buenos Aires, Georgetown",
+              "offset": "-3:00",
+            },
+          },
+          "login": Object {
+            "md5": "2b09bc4c28288d00a2b18dac7f76de44",
+            "password": "autumn",
+            "salt": "UKKs7HYq",
+            "sha1": "de5cff136b4edfeb353ed3950f8276089cc9d79b",
+            "sha256": "a673bbd39e3adc7ccec88ce2d19ed24b0cc53d1e1e852c15dcfbd37ce5d8c367",
+            "username": "crazyleopard483",
+            "uuid": "8e3fabe6-8b6b-4736-9c94-75b994f8d414",
+          },
+          "name": Object {
+            "first": "Lilja",
+            "last": "Jokela",
+            "title": "Mrs",
+          },
+          "nat": "FI",
+          "phone": "04-844-011",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/women/38.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/38.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/38.jpg",
+          },
+          "registered": Object {
+            "age": 4,
+            "date": "2016-07-20T20:43:33.792Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="elizabeth.fitzsimmons@example.comwhitebird629"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "081-894-8456",
+          "dob": Object {
+            "age": 55,
+            "date": "1965-08-23T18:45:56.510Z",
+          },
+          "email": "elizabeth.fitzsimmons@example.com",
+          "gender": "female",
+          "id": Object {
+            "name": "PPS",
+            "value": "5705495T",
+          },
+          "location": Object {
+            "city": "Carrigtwohill",
+            "coordinates": Object {
+              "latitude": "3.9870",
+              "longitude": "-26.4752",
+            },
+            "country": "Ireland",
+            "postcode": 43719,
+            "state": "Monaghan",
+            "street": Object {
+              "name": "Galway Road",
+              "number": 8029,
+            },
+            "timezone": Object {
+              "description": "Kabul",
+              "offset": "+4:30",
+            },
+          },
+          "login": Object {
+            "md5": "ef83c24de3ed16772a5f8f9b2129361f",
+            "password": "genius",
+            "salt": "LZlhnrZf",
+            "sha1": "bbc1d6fff8914a7db416e287826f010919f34fa4",
+            "sha256": "271756af4be4c0d534ab2a4d3e2b1f5208063e5e067eaa94b0eaca02fd4e2581",
+            "username": "whitebird629",
+            "uuid": "cd65d771-329c-4f25-ac50-1cad545ac23b",
+          },
+          "name": Object {
+            "first": "Elizabeth",
+            "last": "Fitzsimmons",
+            "title": "Miss",
+          },
+          "nat": "IE",
+          "phone": "051-825-5109",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/women/92.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/92.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/92.jpg",
+          },
+          "registered": Object {
+            "age": 11,
+            "date": "2009-02-01T18:49:44.676Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="grace.hayes@example.comticklishfrog920"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "(824)-718-6927",
+          "dob": Object {
+            "age": 49,
+            "date": "1971-06-03T09:42:12.926Z",
+          },
+          "email": "grace.hayes@example.com",
+          "gender": "female",
+          "id": Object {
+            "name": "SSN",
+            "value": "542-75-2315",
+          },
+          "location": Object {
+            "city": "Honolulu",
+            "coordinates": Object {
+              "latitude": "-22.5618",
+              "longitude": "36.5461",
+            },
+            "country": "United States",
+            "postcode": 70240,
+            "state": "Virginia",
+            "street": Object {
+              "name": "Railroad St",
+              "number": 8886,
+            },
+            "timezone": Object {
+              "description": "Beijing, Perth, Singapore, Hong Kong",
+              "offset": "+8:00",
+            },
+          },
+          "login": Object {
+            "md5": "b51539121dab80fa3e2ada0cc3167c9d",
+            "password": "paulie",
+            "salt": "FqaoRps6",
+            "sha1": "00b9218d0778b2eb07470691830698a5d318a747",
+            "sha256": "fc8a46a0156e03e570fc3389e76c2dce3c7d6768b470be7ef4715d8467713522",
+            "username": "ticklishfrog920",
+            "uuid": "d3134d16-e196-46fa-a498-21eef7d78a9c",
+          },
+          "name": Object {
+            "first": "Grace",
+            "last": "Hayes",
+            "title": "Ms",
+          },
+          "nat": "US",
+          "phone": "(841)-092-9021",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/women/33.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/33.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/33.jpg",
+          },
+          "registered": Object {
+            "age": 18,
+            "date": "2002-09-17T15:44:05.886Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="dioclecia.campos@example.comorganicpanda259"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "(12) 8149-3353",
+          "dob": Object {
+            "age": 47,
+            "date": "1973-02-08T23:44:08.300Z",
+          },
+          "email": "dioclecia.campos@example.com",
+          "gender": "female",
+          "id": Object {
+            "name": "",
+            "value": null,
+          },
+          "location": Object {
+            "city": "Maracanaú",
+            "coordinates": Object {
+              "latitude": "-77.8314",
+              "longitude": "10.5344",
+            },
+            "country": "Brazil",
+            "postcode": 34040,
+            "state": "Rondônia",
+            "street": Object {
+              "name": "Rua Pernambuco ",
+              "number": 2003,
+            },
+            "timezone": Object {
+              "description": "Beijing, Perth, Singapore, Hong Kong",
+              "offset": "+8:00",
+            },
+          },
+          "login": Object {
+            "md5": "99cd9a47f8379db73808f23de608fc7f",
+            "password": "spread",
+            "salt": "8Gx3wYi5",
+            "sha1": "b7432a33c95357c03a4aeae311346d1e2ef7da35",
+            "sha256": "b95c97745c194505db96b236d3931ae2d0275ffdb8982144411c10ec2470db47",
+            "username": "organicpanda259",
+            "uuid": "7f8fc56b-dea6-4ea8-803b-44ead5e705d6",
+          },
+          "name": Object {
+            "first": "Dioclécia",
+            "last": "Campos",
+            "title": "Ms",
+          },
+          "nat": "BR",
+          "phone": "(47) 2714-2607",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/women/82.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/82.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/82.jpg",
+          },
+          "registered": Object {
+            "age": 12,
+            "date": "2008-09-10T23:20:06.420Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="mlyn.rdyy@example.comangryfrog283"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "0964-916-8118",
+          "dob": Object {
+            "age": 65,
+            "date": "1955-02-04T21:44:15.732Z",
+          },
+          "email": "mlyn.rdyy@example.com",
+          "gender": "female",
+          "id": Object {
+            "name": "",
+            "value": null,
+          },
+          "location": Object {
+            "city": "بوشهر",
+            "coordinates": Object {
+              "latitude": "-63.7699",
+              "longitude": "-151.3513",
+            },
+            "country": "Iran",
+            "postcode": 80968,
+            "state": "آذربایجان غربی",
+            "street": Object {
+              "name": "میدان فلسطین",
+              "number": 986,
+            },
+            "timezone": Object {
+              "description": "Newfoundland",
+              "offset": "-3:30",
+            },
+          },
+          "login": Object {
+            "md5": "ba4c2e3baf53034f3ae83d6232bcdfe1",
+            "password": "sluggo",
+            "salt": "qdbuA3WR",
+            "sha1": "649c083f0e63627ff63629e51945cb3a0d69785d",
+            "sha256": "c0cfa9ce2940dcbfdc56857095473a966768a5a81d3e33bf2ab06b8655ed90df",
+            "username": "angryfrog283",
+            "uuid": "e3f042d3-6b3c-49f3-b963-c845381e31bd",
+          },
+          "name": Object {
+            "first": "ملینا",
+            "last": "رضایی",
+            "title": "Miss",
+          },
+          "nat": "IR",
+          "phone": "011-61653559",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/women/11.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/11.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/11.jpg",
+          },
+          "registered": Object {
+            "age": 5,
+            "date": "2015-01-08T21:12:58.291Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="victor.martin@example.combigfish956"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "0784-023-762",
+          "dob": Object {
+            "age": 29,
+            "date": "1991-07-20T02:55:40.967Z",
+          },
+          "email": "victor.martin@example.com",
+          "gender": "male",
+          "id": Object {
+            "name": "NINO",
+            "value": "WE 53 03 85 P",
+          },
+          "location": Object {
+            "city": "Newport",
+            "coordinates": Object {
+              "latitude": "-53.9545",
+              "longitude": "2.4196",
+            },
+            "country": "United Kingdom",
+            "postcode": "WC6 7AY",
+            "state": "Gloucestershire",
+            "street": Object {
+              "name": "King Street",
+              "number": 5285,
+            },
+            "timezone": Object {
+              "description": "Mountain Time (US & Canada)",
+              "offset": "-7:00",
+            },
+          },
+          "login": Object {
+            "md5": "8a3811df3c7197002c846adf97c54602",
+            "password": "james1",
+            "salt": "ALrBE392",
+            "sha1": "b10c7f84287a086f896d4eb4664ab9b52647806a",
+            "sha256": "545aaae2958c475411c3aa40c0d84a7c02d69a0345b8f5a652dcdf2e63961af5",
+            "username": "bigfish956",
+            "uuid": "8c4f85e5-d2ed-49b2-85d6-b4b274a1b24e",
+          },
+          "name": Object {
+            "first": "Victor",
+            "last": "Martin",
+            "title": "Mr",
+          },
+          "nat": "GB",
+          "phone": "015242 81119",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/men/68.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/68.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/68.jpg",
+          },
+          "registered": Object {
+            "age": 14,
+            "date": "2006-07-20T17:49:47.026Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+</UsersList>
+`;
+
+exports[`UsersList component should render the user modal details when clicking on the user preview card2 1`] = `
+<UsersList
+  users={
+    Array [
+      Object {
+        "cell": "88592966",
+        "dob": Object {
+          "age": 70,
+          "date": "1950-02-27T16:49:15.705Z",
+        },
+        "email": "simmon.martin@example.com",
+        "gender": "male",
+        "id": Object {
+          "name": "CPR",
+          "value": "270250-8357",
+        },
+        "location": Object {
+          "city": "Tisvilde",
+          "coordinates": Object {
+            "latitude": "-27.4297",
+            "longitude": "-37.0144",
+          },
+          "country": "Denmark",
+          "postcode": 28816,
+          "state": "Danmark",
+          "street": Object {
+            "name": "Gormsvej",
+            "number": 3865,
+          },
+          "timezone": Object {
+            "description": "Abu Dhabi, Muscat, Baku, Tbilisi",
+            "offset": "+4:00",
+          },
+        },
+        "login": Object {
+          "md5": "ac3673267c4606e6fa5f754047d57a4a",
+          "password": "testibil",
+          "salt": "uPCA1DOi",
+          "sha1": "c1e2a5b2e2daa5020a02b4ba54bc8881b4233b6c",
+          "sha256": "4797c6d5a893a92bccca7b09cb8c19381d909389bbfeab3a6a9ec07bc8503b23",
+          "username": "purplebird556",
+          "uuid": "dca63e13-5a76-4d7a-aea1-817919275f83",
+        },
+        "name": Object {
+          "first": "Simmon",
+          "last": "Martin",
+          "title": "Mr",
+        },
+        "nat": "DK",
+        "phone": "05143951",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/men/59.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/men/59.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/men/59.jpg",
+        },
+        "registered": Object {
+          "age": 10,
+          "date": "2010-10-27T11:48:05.160Z",
+        },
+      },
+      Object {
+        "cell": "045-891-39-73",
+        "dob": Object {
+          "age": 34,
+          "date": "1986-09-27T06:06:51.382Z",
+        },
+        "email": "lilja.jokela@example.com",
+        "gender": "female",
+        "id": Object {
+          "name": "HETU",
+          "value": "NaNNA006undefined",
+        },
+        "location": Object {
+          "city": "Keminmaa",
+          "coordinates": Object {
+            "latitude": "64.2460",
+            "longitude": "136.8692",
+          },
+          "country": "Finland",
+          "postcode": 43533,
+          "state": "Ostrobothnia",
+          "street": Object {
+            "name": "Pispalan Valtatie",
+            "number": 7548,
+          },
+          "timezone": Object {
+            "description": "Brazil, Buenos Aires, Georgetown",
+            "offset": "-3:00",
+          },
+        },
+        "login": Object {
+          "md5": "2b09bc4c28288d00a2b18dac7f76de44",
+          "password": "autumn",
+          "salt": "UKKs7HYq",
+          "sha1": "de5cff136b4edfeb353ed3950f8276089cc9d79b",
+          "sha256": "a673bbd39e3adc7ccec88ce2d19ed24b0cc53d1e1e852c15dcfbd37ce5d8c367",
+          "username": "crazyleopard483",
+          "uuid": "8e3fabe6-8b6b-4736-9c94-75b994f8d414",
+        },
+        "name": Object {
+          "first": "Lilja",
+          "last": "Jokela",
+          "title": "Mrs",
+        },
+        "nat": "FI",
+        "phone": "04-844-011",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/women/38.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/38.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/38.jpg",
+        },
+        "registered": Object {
+          "age": 4,
+          "date": "2016-07-20T20:43:33.792Z",
+        },
+      },
+      Object {
+        "cell": "081-894-8456",
+        "dob": Object {
+          "age": 55,
+          "date": "1965-08-23T18:45:56.510Z",
+        },
+        "email": "elizabeth.fitzsimmons@example.com",
+        "gender": "female",
+        "id": Object {
+          "name": "PPS",
+          "value": "5705495T",
+        },
+        "location": Object {
+          "city": "Carrigtwohill",
+          "coordinates": Object {
+            "latitude": "3.9870",
+            "longitude": "-26.4752",
+          },
+          "country": "Ireland",
+          "postcode": 43719,
+          "state": "Monaghan",
+          "street": Object {
+            "name": "Galway Road",
+            "number": 8029,
+          },
+          "timezone": Object {
+            "description": "Kabul",
+            "offset": "+4:30",
+          },
+        },
+        "login": Object {
+          "md5": "ef83c24de3ed16772a5f8f9b2129361f",
+          "password": "genius",
+          "salt": "LZlhnrZf",
+          "sha1": "bbc1d6fff8914a7db416e287826f010919f34fa4",
+          "sha256": "271756af4be4c0d534ab2a4d3e2b1f5208063e5e067eaa94b0eaca02fd4e2581",
+          "username": "whitebird629",
+          "uuid": "cd65d771-329c-4f25-ac50-1cad545ac23b",
+        },
+        "name": Object {
+          "first": "Elizabeth",
+          "last": "Fitzsimmons",
+          "title": "Miss",
+        },
+        "nat": "IE",
+        "phone": "051-825-5109",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/women/92.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/92.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/92.jpg",
+        },
+        "registered": Object {
+          "age": 11,
+          "date": "2009-02-01T18:49:44.676Z",
+        },
+      },
+      Object {
+        "cell": "(824)-718-6927",
+        "dob": Object {
+          "age": 49,
+          "date": "1971-06-03T09:42:12.926Z",
+        },
+        "email": "grace.hayes@example.com",
+        "gender": "female",
+        "id": Object {
+          "name": "SSN",
+          "value": "542-75-2315",
+        },
+        "location": Object {
+          "city": "Honolulu",
+          "coordinates": Object {
+            "latitude": "-22.5618",
+            "longitude": "36.5461",
+          },
+          "country": "United States",
+          "postcode": 70240,
+          "state": "Virginia",
+          "street": Object {
+            "name": "Railroad St",
+            "number": 8886,
+          },
+          "timezone": Object {
+            "description": "Beijing, Perth, Singapore, Hong Kong",
+            "offset": "+8:00",
+          },
+        },
+        "login": Object {
+          "md5": "b51539121dab80fa3e2ada0cc3167c9d",
+          "password": "paulie",
+          "salt": "FqaoRps6",
+          "sha1": "00b9218d0778b2eb07470691830698a5d318a747",
+          "sha256": "fc8a46a0156e03e570fc3389e76c2dce3c7d6768b470be7ef4715d8467713522",
+          "username": "ticklishfrog920",
+          "uuid": "d3134d16-e196-46fa-a498-21eef7d78a9c",
+        },
+        "name": Object {
+          "first": "Grace",
+          "last": "Hayes",
+          "title": "Ms",
+        },
+        "nat": "US",
+        "phone": "(841)-092-9021",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/women/33.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/33.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/33.jpg",
+        },
+        "registered": Object {
+          "age": 18,
+          "date": "2002-09-17T15:44:05.886Z",
+        },
+      },
+      Object {
+        "cell": "(12) 8149-3353",
+        "dob": Object {
+          "age": 47,
+          "date": "1973-02-08T23:44:08.300Z",
+        },
+        "email": "dioclecia.campos@example.com",
+        "gender": "female",
+        "id": Object {
+          "name": "",
+          "value": null,
+        },
+        "location": Object {
+          "city": "Maracanaú",
+          "coordinates": Object {
+            "latitude": "-77.8314",
+            "longitude": "10.5344",
+          },
+          "country": "Brazil",
+          "postcode": 34040,
+          "state": "Rondônia",
+          "street": Object {
+            "name": "Rua Pernambuco ",
+            "number": 2003,
+          },
+          "timezone": Object {
+            "description": "Beijing, Perth, Singapore, Hong Kong",
+            "offset": "+8:00",
+          },
+        },
+        "login": Object {
+          "md5": "99cd9a47f8379db73808f23de608fc7f",
+          "password": "spread",
+          "salt": "8Gx3wYi5",
+          "sha1": "b7432a33c95357c03a4aeae311346d1e2ef7da35",
+          "sha256": "b95c97745c194505db96b236d3931ae2d0275ffdb8982144411c10ec2470db47",
+          "username": "organicpanda259",
+          "uuid": "7f8fc56b-dea6-4ea8-803b-44ead5e705d6",
+        },
+        "name": Object {
+          "first": "Dioclécia",
+          "last": "Campos",
+          "title": "Ms",
+        },
+        "nat": "BR",
+        "phone": "(47) 2714-2607",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/women/82.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/82.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/82.jpg",
+        },
+        "registered": Object {
+          "age": 12,
+          "date": "2008-09-10T23:20:06.420Z",
+        },
+      },
+      Object {
+        "cell": "0964-916-8118",
+        "dob": Object {
+          "age": 65,
+          "date": "1955-02-04T21:44:15.732Z",
+        },
+        "email": "mlyn.rdyy@example.com",
+        "gender": "female",
+        "id": Object {
+          "name": "",
+          "value": null,
+        },
+        "location": Object {
+          "city": "بوشهر",
+          "coordinates": Object {
+            "latitude": "-63.7699",
+            "longitude": "-151.3513",
+          },
+          "country": "Iran",
+          "postcode": 80968,
+          "state": "آذربایجان غربی",
+          "street": Object {
+            "name": "میدان فلسطین",
+            "number": 986,
+          },
+          "timezone": Object {
+            "description": "Newfoundland",
+            "offset": "-3:30",
+          },
+        },
+        "login": Object {
+          "md5": "ba4c2e3baf53034f3ae83d6232bcdfe1",
+          "password": "sluggo",
+          "salt": "qdbuA3WR",
+          "sha1": "649c083f0e63627ff63629e51945cb3a0d69785d",
+          "sha256": "c0cfa9ce2940dcbfdc56857095473a966768a5a81d3e33bf2ab06b8655ed90df",
+          "username": "angryfrog283",
+          "uuid": "e3f042d3-6b3c-49f3-b963-c845381e31bd",
+        },
+        "name": Object {
+          "first": "ملینا",
+          "last": "رضایی",
+          "title": "Miss",
+        },
+        "nat": "IR",
+        "phone": "011-61653559",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/women/11.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/women/11.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/women/11.jpg",
+        },
+        "registered": Object {
+          "age": 5,
+          "date": "2015-01-08T21:12:58.291Z",
+        },
+      },
+      Object {
+        "cell": "0784-023-762",
+        "dob": Object {
+          "age": 29,
+          "date": "1991-07-20T02:55:40.967Z",
+        },
+        "email": "victor.martin@example.com",
+        "gender": "male",
+        "id": Object {
+          "name": "NINO",
+          "value": "WE 53 03 85 P",
+        },
+        "location": Object {
+          "city": "Newport",
+          "coordinates": Object {
+            "latitude": "-53.9545",
+            "longitude": "2.4196",
+          },
+          "country": "United Kingdom",
+          "postcode": "WC6 7AY",
+          "state": "Gloucestershire",
+          "street": Object {
+            "name": "King Street",
+            "number": 5285,
+          },
+          "timezone": Object {
+            "description": "Mountain Time (US & Canada)",
+            "offset": "-7:00",
+          },
+        },
+        "login": Object {
+          "md5": "8a3811df3c7197002c846adf97c54602",
+          "password": "james1",
+          "salt": "ALrBE392",
+          "sha1": "b10c7f84287a086f896d4eb4664ab9b52647806a",
+          "sha256": "545aaae2958c475411c3aa40c0d84a7c02d69a0345b8f5a652dcdf2e63961af5",
+          "username": "bigfish956",
+          "uuid": "8c4f85e5-d2ed-49b2-85d6-b4b274a1b24e",
+        },
+        "name": Object {
+          "first": "Victor",
+          "last": "Martin",
+          "title": "Mr",
+        },
+        "nat": "GB",
+        "phone": "015242 81119",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/men/68.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/men/68.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/men/68.jpg",
+        },
+        "registered": Object {
+          "age": 14,
+          "date": "2006-07-20T17:49:47.026Z",
+        },
+      },
+    ]
+  }
+>
+  <div
+    data-testid="user-preview-wrapper"
+    key="simmon.martin@example.compurplebird556"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "88592966",
+          "dob": Object {
+            "age": 70,
+            "date": "1950-02-27T16:49:15.705Z",
+          },
+          "email": "simmon.martin@example.com",
+          "gender": "male",
+          "id": Object {
+            "name": "CPR",
+            "value": "270250-8357",
+          },
+          "location": Object {
+            "city": "Tisvilde",
+            "coordinates": Object {
+              "latitude": "-27.4297",
+              "longitude": "-37.0144",
+            },
+            "country": "Denmark",
+            "postcode": 28816,
+            "state": "Danmark",
+            "street": Object {
+              "name": "Gormsvej",
+              "number": 3865,
+            },
+            "timezone": Object {
+              "description": "Abu Dhabi, Muscat, Baku, Tbilisi",
+              "offset": "+4:00",
+            },
+          },
+          "login": Object {
+            "md5": "ac3673267c4606e6fa5f754047d57a4a",
+            "password": "testibil",
+            "salt": "uPCA1DOi",
+            "sha1": "c1e2a5b2e2daa5020a02b4ba54bc8881b4233b6c",
+            "sha256": "4797c6d5a893a92bccca7b09cb8c19381d909389bbfeab3a6a9ec07bc8503b23",
+            "username": "purplebird556",
+            "uuid": "dca63e13-5a76-4d7a-aea1-817919275f83",
+          },
+          "name": Object {
+            "first": "Simmon",
+            "last": "Martin",
+            "title": "Mr",
+          },
+          "nat": "DK",
+          "phone": "05143951",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/men/59.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/59.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/59.jpg",
+          },
+          "registered": Object {
+            "age": 10,
+            "date": "2010-10-27T11:48:05.160Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="lilja.jokela@example.comcrazyleopard483"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "045-891-39-73",
+          "dob": Object {
+            "age": 34,
+            "date": "1986-09-27T06:06:51.382Z",
+          },
+          "email": "lilja.jokela@example.com",
+          "gender": "female",
+          "id": Object {
+            "name": "HETU",
+            "value": "NaNNA006undefined",
+          },
+          "location": Object {
+            "city": "Keminmaa",
+            "coordinates": Object {
+              "latitude": "64.2460",
+              "longitude": "136.8692",
+            },
+            "country": "Finland",
+            "postcode": 43533,
+            "state": "Ostrobothnia",
+            "street": Object {
+              "name": "Pispalan Valtatie",
+              "number": 7548,
+            },
+            "timezone": Object {
+              "description": "Brazil, Buenos Aires, Georgetown",
+              "offset": "-3:00",
+            },
+          },
+          "login": Object {
+            "md5": "2b09bc4c28288d00a2b18dac7f76de44",
+            "password": "autumn",
+            "salt": "UKKs7HYq",
+            "sha1": "de5cff136b4edfeb353ed3950f8276089cc9d79b",
+            "sha256": "a673bbd39e3adc7ccec88ce2d19ed24b0cc53d1e1e852c15dcfbd37ce5d8c367",
+            "username": "crazyleopard483",
+            "uuid": "8e3fabe6-8b6b-4736-9c94-75b994f8d414",
+          },
+          "name": Object {
+            "first": "Lilja",
+            "last": "Jokela",
+            "title": "Mrs",
+          },
+          "nat": "FI",
+          "phone": "04-844-011",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/women/38.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/38.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/38.jpg",
+          },
+          "registered": Object {
+            "age": 4,
+            "date": "2016-07-20T20:43:33.792Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="elizabeth.fitzsimmons@example.comwhitebird629"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "081-894-8456",
+          "dob": Object {
+            "age": 55,
+            "date": "1965-08-23T18:45:56.510Z",
+          },
+          "email": "elizabeth.fitzsimmons@example.com",
+          "gender": "female",
+          "id": Object {
+            "name": "PPS",
+            "value": "5705495T",
+          },
+          "location": Object {
+            "city": "Carrigtwohill",
+            "coordinates": Object {
+              "latitude": "3.9870",
+              "longitude": "-26.4752",
+            },
+            "country": "Ireland",
+            "postcode": 43719,
+            "state": "Monaghan",
+            "street": Object {
+              "name": "Galway Road",
+              "number": 8029,
+            },
+            "timezone": Object {
+              "description": "Kabul",
+              "offset": "+4:30",
+            },
+          },
+          "login": Object {
+            "md5": "ef83c24de3ed16772a5f8f9b2129361f",
+            "password": "genius",
+            "salt": "LZlhnrZf",
+            "sha1": "bbc1d6fff8914a7db416e287826f010919f34fa4",
+            "sha256": "271756af4be4c0d534ab2a4d3e2b1f5208063e5e067eaa94b0eaca02fd4e2581",
+            "username": "whitebird629",
+            "uuid": "cd65d771-329c-4f25-ac50-1cad545ac23b",
+          },
+          "name": Object {
+            "first": "Elizabeth",
+            "last": "Fitzsimmons",
+            "title": "Miss",
+          },
+          "nat": "IE",
+          "phone": "051-825-5109",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/women/92.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/92.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/92.jpg",
+          },
+          "registered": Object {
+            "age": 11,
+            "date": "2009-02-01T18:49:44.676Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="grace.hayes@example.comticklishfrog920"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "(824)-718-6927",
+          "dob": Object {
+            "age": 49,
+            "date": "1971-06-03T09:42:12.926Z",
+          },
+          "email": "grace.hayes@example.com",
+          "gender": "female",
+          "id": Object {
+            "name": "SSN",
+            "value": "542-75-2315",
+          },
+          "location": Object {
+            "city": "Honolulu",
+            "coordinates": Object {
+              "latitude": "-22.5618",
+              "longitude": "36.5461",
+            },
+            "country": "United States",
+            "postcode": 70240,
+            "state": "Virginia",
+            "street": Object {
+              "name": "Railroad St",
+              "number": 8886,
+            },
+            "timezone": Object {
+              "description": "Beijing, Perth, Singapore, Hong Kong",
+              "offset": "+8:00",
+            },
+          },
+          "login": Object {
+            "md5": "b51539121dab80fa3e2ada0cc3167c9d",
+            "password": "paulie",
+            "salt": "FqaoRps6",
+            "sha1": "00b9218d0778b2eb07470691830698a5d318a747",
+            "sha256": "fc8a46a0156e03e570fc3389e76c2dce3c7d6768b470be7ef4715d8467713522",
+            "username": "ticklishfrog920",
+            "uuid": "d3134d16-e196-46fa-a498-21eef7d78a9c",
+          },
+          "name": Object {
+            "first": "Grace",
+            "last": "Hayes",
+            "title": "Ms",
+          },
+          "nat": "US",
+          "phone": "(841)-092-9021",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/women/33.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/33.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/33.jpg",
+          },
+          "registered": Object {
+            "age": 18,
+            "date": "2002-09-17T15:44:05.886Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="dioclecia.campos@example.comorganicpanda259"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "(12) 8149-3353",
+          "dob": Object {
+            "age": 47,
+            "date": "1973-02-08T23:44:08.300Z",
+          },
+          "email": "dioclecia.campos@example.com",
+          "gender": "female",
+          "id": Object {
+            "name": "",
+            "value": null,
+          },
+          "location": Object {
+            "city": "Maracanaú",
+            "coordinates": Object {
+              "latitude": "-77.8314",
+              "longitude": "10.5344",
+            },
+            "country": "Brazil",
+            "postcode": 34040,
+            "state": "Rondônia",
+            "street": Object {
+              "name": "Rua Pernambuco ",
+              "number": 2003,
+            },
+            "timezone": Object {
+              "description": "Beijing, Perth, Singapore, Hong Kong",
+              "offset": "+8:00",
+            },
+          },
+          "login": Object {
+            "md5": "99cd9a47f8379db73808f23de608fc7f",
+            "password": "spread",
+            "salt": "8Gx3wYi5",
+            "sha1": "b7432a33c95357c03a4aeae311346d1e2ef7da35",
+            "sha256": "b95c97745c194505db96b236d3931ae2d0275ffdb8982144411c10ec2470db47",
+            "username": "organicpanda259",
+            "uuid": "7f8fc56b-dea6-4ea8-803b-44ead5e705d6",
+          },
+          "name": Object {
+            "first": "Dioclécia",
+            "last": "Campos",
+            "title": "Ms",
+          },
+          "nat": "BR",
+          "phone": "(47) 2714-2607",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/women/82.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/82.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/82.jpg",
+          },
+          "registered": Object {
+            "age": 12,
+            "date": "2008-09-10T23:20:06.420Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="mlyn.rdyy@example.comangryfrog283"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "0964-916-8118",
+          "dob": Object {
+            "age": 65,
+            "date": "1955-02-04T21:44:15.732Z",
+          },
+          "email": "mlyn.rdyy@example.com",
+          "gender": "female",
+          "id": Object {
+            "name": "",
+            "value": null,
+          },
+          "location": Object {
+            "city": "بوشهر",
+            "coordinates": Object {
+              "latitude": "-63.7699",
+              "longitude": "-151.3513",
+            },
+            "country": "Iran",
+            "postcode": 80968,
+            "state": "آذربایجان غربی",
+            "street": Object {
+              "name": "میدان فلسطین",
+              "number": 986,
+            },
+            "timezone": Object {
+              "description": "Newfoundland",
+              "offset": "-3:30",
+            },
+          },
+          "login": Object {
+            "md5": "ba4c2e3baf53034f3ae83d6232bcdfe1",
+            "password": "sluggo",
+            "salt": "qdbuA3WR",
+            "sha1": "649c083f0e63627ff63629e51945cb3a0d69785d",
+            "sha256": "c0cfa9ce2940dcbfdc56857095473a966768a5a81d3e33bf2ab06b8655ed90df",
+            "username": "angryfrog283",
+            "uuid": "e3f042d3-6b3c-49f3-b963-c845381e31bd",
+          },
+          "name": Object {
+            "first": "ملینا",
+            "last": "رضایی",
+            "title": "Miss",
+          },
+          "nat": "IR",
+          "phone": "011-61653559",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/women/11.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/11.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/11.jpg",
+          },
+          "registered": Object {
+            "age": 5,
+            "date": "2015-01-08T21:12:58.291Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <div
+    data-testid="user-preview-wrapper"
+    key="victor.martin@example.combigfish956"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <Component
+      user={
+        Object {
+          "cell": "0784-023-762",
+          "dob": Object {
+            "age": 29,
+            "date": "1991-07-20T02:55:40.967Z",
+          },
+          "email": "victor.martin@example.com",
+          "gender": "male",
+          "id": Object {
+            "name": "NINO",
+            "value": "WE 53 03 85 P",
+          },
+          "location": Object {
+            "city": "Newport",
+            "coordinates": Object {
+              "latitude": "-53.9545",
+              "longitude": "2.4196",
+            },
+            "country": "United Kingdom",
+            "postcode": "WC6 7AY",
+            "state": "Gloucestershire",
+            "street": Object {
+              "name": "King Street",
+              "number": 5285,
+            },
+            "timezone": Object {
+              "description": "Mountain Time (US & Canada)",
+              "offset": "-7:00",
+            },
+          },
+          "login": Object {
+            "md5": "8a3811df3c7197002c846adf97c54602",
+            "password": "james1",
+            "salt": "ALrBE392",
+            "sha1": "b10c7f84287a086f896d4eb4664ab9b52647806a",
+            "sha256": "545aaae2958c475411c3aa40c0d84a7c02d69a0345b8f5a652dcdf2e63961af5",
+            "username": "bigfish956",
+            "uuid": "8c4f85e5-d2ed-49b2-85d6-b4b274a1b24e",
+          },
+          "name": Object {
+            "first": "Victor",
+            "last": "Martin",
+            "title": "Mr",
+          },
+          "nat": "GB",
+          "phone": "015242 81119",
+          "picture": Object {
+            "large": "https://randomuser.me/api/portraits/men/68.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/68.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/68.jpg",
+          },
+          "registered": Object {
+            "age": 14,
+            "date": "2006-07-20T17:49:47.026Z",
+          },
+        }
+      }
+    >
+      <div
+        data-testid="user-preview"
+      />
+    </Component>
+  </div>
+  <Component
+    isOpen={true}
+    onClose={[Function]}
+    user={
+      Object {
+        "cell": "88592966",
+        "dob": Object {
+          "age": 70,
+          "date": "1950-02-27T16:49:15.705Z",
+        },
+        "email": "simmon.martin@example.com",
+        "gender": "male",
+        "id": Object {
+          "name": "CPR",
+          "value": "270250-8357",
+        },
+        "location": Object {
+          "city": "Tisvilde",
+          "coordinates": Object {
+            "latitude": "-27.4297",
+            "longitude": "-37.0144",
+          },
+          "country": "Denmark",
+          "postcode": 28816,
+          "state": "Danmark",
+          "street": Object {
+            "name": "Gormsvej",
+            "number": 3865,
+          },
+          "timezone": Object {
+            "description": "Abu Dhabi, Muscat, Baku, Tbilisi",
+            "offset": "+4:00",
+          },
+        },
+        "login": Object {
+          "md5": "ac3673267c4606e6fa5f754047d57a4a",
+          "password": "testibil",
+          "salt": "uPCA1DOi",
+          "sha1": "c1e2a5b2e2daa5020a02b4ba54bc8881b4233b6c",
+          "sha256": "4797c6d5a893a92bccca7b09cb8c19381d909389bbfeab3a6a9ec07bc8503b23",
+          "username": "purplebird556",
+          "uuid": "dca63e13-5a76-4d7a-aea1-817919275f83",
+        },
+        "name": Object {
+          "first": "Simmon",
+          "last": "Martin",
+          "title": "Mr",
+        },
+        "nat": "DK",
+        "phone": "05143951",
+        "picture": Object {
+          "large": "https://randomuser.me/api/portraits/men/59.jpg",
+          "medium": "https://randomuser.me/api/portraits/med/men/59.jpg",
+          "thumbnail": "https://randomuser.me/api/portraits/thumb/men/59.jpg",
+        },
+        "registered": Object {
+          "age": 10,
+          "date": "2010-10-27T11:48:05.160Z",
+        },
+      }
+    }
+  >
+    <div
+      data-testid="user-details"
+    />
+  </Component>
+</UsersList>
+`;

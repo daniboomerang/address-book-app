@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import filterUsers from '../lib/filteringUtils';
-import { UserPreview, Spinner, AlertMessage } from '../components';
+import { AlertMessage, UsersList, Spinner } from '../components';
 
 export const PAGE_SIZE = 50;
 const MAX_CATALOGUE_SIZE = 1000;
@@ -158,9 +158,7 @@ export const Home = ({ selectedNationalities }) => {
               {`${filteredUsers.length} result${filteredUsers.length > 1 ? 's' : ''}`}
             </div>
           )}
-          {filteredUsers.map((user) => (
-            <UserPreview key={user.email + user.login.username} user={user} />
-          ))}
+          {areThereResults && <UsersList users={filteredUsers} />}
           {error.length > 0 && (
             <AlertMessage>
               Error retrieving contacts.
