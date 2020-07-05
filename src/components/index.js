@@ -1,7 +1,19 @@
+import { BrFlag, ChFlag, EsFlag, FrFlag } from './flags';
+
 import AlertMessage from './AlertMessage';
 import UserDetailsModal from './UserDetailsModal';
 import UserPreview from './UserPreview';
 import UsersList from './UsersList';
 import Spinner from './Spinner';
 
-export { AlertMessage, UserDetailsModal, UserPreview, UsersList, Spinner };
+export {
+  AlertMessage,
+  BrFlag,
+  ChFlag,
+  EsFlag,
+  FrFlag,
+  UserDetailsModal,
+  UserPreview,
+  UsersList,
+  Spinner,
+};

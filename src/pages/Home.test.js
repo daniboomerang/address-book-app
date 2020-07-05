@@ -5,7 +5,7 @@ import axios from 'axios';
 import { fetchMockedData, usersMockedData } from '../__mocks__/mocked-data';
 import { MemoryRouter } from 'react-router-dom';
 import { Home, PAGE_SIZE } from './Home';
-import { NATIONALITIES } from '../constants';
+import { NATIONALITIES, SWISS, SPANISH, BRITISH, FRENCH } from '../constants';
 
 jest.mock('axios');
 jest.mock('../components/UserPreview', () => ({ user }) => (
@@ -123,6 +123,12 @@ describe('Home page component', () => {
     for (let i = 0; i < usersMockedData.length; i++) {
       expect(users[i].textContent).toContain(usersMockedData[i].name.first);
     }
+
+    // The nationality flags of the queried users shall be displayed in the result message
+    expect(getByTestId(`${BRITISH}-flag`)).toBeTruthy();
+    expect(getByTestId(`${SWISS}-flag`)).toBeTruthy();
+    expect(getByTestId(`${SPANISH}-flag`)).toBeTruthy();
+    expect(getByTestId(`${FRENCH}-flag`)).toBeTruthy();
 
     // Axios is correctly invoked
     expect(axios.get).toHaveBeenCalledTimes(1);

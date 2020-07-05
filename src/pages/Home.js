@@ -6,7 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import filterUsers from '../lib/filteringUtils';
-import { AlertMessage, UsersList, Spinner } from '../components';
+import { AlertMessage, BrFlag, ChFlag, EsFlag, FrFlag, UsersList, Spinner } from '../components';
+import { SWISS, SPANISH, BRITISH, FRENCH } from '../constants';
 
 export const PAGE_SIZE = 50;
 const MAX_CATALOGUE_SIZE = 1000;
@@ -37,6 +38,7 @@ const Loader = (
   </div>
 );
 
+/** Map redux state to component props */
 const mapStateToProps = (state) => ({
   selectedNationalities: state.nationalities,
 });
@@ -154,8 +156,28 @@ export const Home = ({ selectedNationalities }) => {
           className="m-auto px-4 sm:px-8 xs:pt-8 4sm:px-12 max-w-xs sm:max-w-lg pt-16 sm:pt-20"
         >
           {areThereResults && (
-            <div className="my-8 text-center text-xs">
-              {`${filteredUsers.length} result${filteredUsers.length > 1 ? 's' : ''}`}
+            <div className="my-8">
+              <div className="text-center text-xs">
+                {`${filteredUsers.length} result${filteredUsers.length > 1 ? 's' : ''}${
+                  selectedNationalities.length > 0 ? ' from' : ''
+                }`}
+              </div>
+              {selectedNationalities && (
+                <div className="flex justify-center mt-2">
+                  {selectedNationalities.includes(BRITISH) && (
+                    <BrFlag className="h-4 w-4 sm:h-8 sm:w-8 mx-1" />
+                  )}
+                  {selectedNationalities.includes(SWISS) && (
+                    <ChFlag className="h-4 w-4 sm:h-8 sm:w-8 mx-1" />
+                  )}
+                  {selectedNationalities.includes(SPANISH) && (
+                    <EsFlag className="h-4 w-4 sm:h-8 sm:w-8 mx-1" />
+                  )}
+                  {selectedNationalities.includes(FRENCH) && (
+                    <FrFlag className="h-4 w-4 sm:h-8 sm:w-8 mx-1" />
+                  )}
+                </div>
+              )}
             </div>
           )}
           {areThereResults && <UsersList users={filteredUsers} />}

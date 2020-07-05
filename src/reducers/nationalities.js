@@ -1,7 +1,7 @@
-import { ADD_NATIONALITY, REMOVE_NATIONALITY } from '../constants';
+import { ADD_NATIONALITY, REMOVE_NATIONALITY, BRITISH, FRENCH, SWISS, SPANISH } from '../constants';
 
 // Swiss nationality is selected by default
-const initialState = [];
+const initialState = [BRITISH, FRENCH, SWISS, SPANISH];
 
 const nationalities = (state = initialState, action) => {
   switch (action.type) {

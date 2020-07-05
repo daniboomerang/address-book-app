@@ -6,17 +6,11 @@ import NationalityOptionCard from './NationalityOptionCard';
  * It renders a grid with the different nationality option cards
  */
 const NationalityOptionsGrid = ({ selectedNationalities, actions }) => (
-  <div className="p-4 max-w-md m-auto">
-    <div
-      data-testid="options-grid-message"
-      className="h-24 sm:h-12 my-6 sm:my-12 sm:my-20 text-center"
-    >
+  <div className="px-6 max-w-md m-auto">
+    <div data-testid="options-grid-message" className="h-20 my-6 text-center">
       Filter your users by nationalies.
       {selectedNationalities.length === 0 && (
-        <>
-          <br />
-          <div className="text-sm">If no nationalities are selected no filter will be applied</div>
-        </>
+        <div className="text-sm">If no nationalities are selected no filter will be applied</div>
       )}
     </div>
 

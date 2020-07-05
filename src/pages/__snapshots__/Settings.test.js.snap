@@ -113,14 +113,13 @@ exports[`Settings component should correctly render the settings page 1`] = `
           selectedNationalities={Array []}
         >
           <div
-            className="p-4 max-w-md m-auto"
+            className="px-6 max-w-md m-auto"
           >
             <div
-              className="h-24 sm:h-12 my-6 sm:my-12 sm:my-20 text-center"
+              className="h-20 my-6 text-center"
               data-testid="options-grid-message"
             >
               Filter your users by nationalies.
-              <br />
               <div
                 className="text-sm"
               >
@@ -146,21 +145,26 @@ exports[`Settings component should correctly render the settings page 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
-                  <svg
+                  <BrFlag
                     className="h-12 w-12 sm:h-24 sm:w-24"
-                    viewBox="0 0 512 512"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <rect
-                      fill="#D80027"
-                      height="512"
-                      width="512"
-                    />
-                    <polygon
-                      fill="#F0F0F0"
-                      points="395.13,209.624 302.377,209.624 302.377,116.87 209.623,116.87 209.623,209.624   116.87,209.624 116.87,302.377 209.623,302.377 209.623,395.13 302.377,395.13 302.377,302.377 395.13,302.377 "
-                    />
-                  </svg>
+                    <svg
+                      className="h-12 w-12 sm:h-24 sm:w-24"
+                      data-testid="CH-flag"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        fill="#D80027"
+                        height="512"
+                        width="512"
+                      />
+                      <polygon
+                        fill="#F0F0F0"
+                        points="395.13,209.624 302.377,209.624 302.377,116.87 209.623,116.87 209.623,209.624   116.87,209.624 116.87,302.377 209.623,302.377 209.623,395.13 302.377,395.13 302.377,302.377 395.13,302.377 "
+                      />
+                    </svg>
+                  </BrFlag>
                   <span
                     className="mt-4"
                   >
@@ -179,30 +183,35 @@ exports[`Settings component should correctly render the settings page 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
-                  <svg
+                  <BrFlag
                     className="h-12 w-12 sm:h-24 sm:w-24"
-                    viewBox="0 0 512 512"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <rect
-                      fill="#FFDA44"
-                      height="512"
-                      width="512"
-                    />
-                    <g>
+                    <svg
+                      className="h-12 w-12 sm:h-24 sm:w-24"
+                      data-testid="ES-flag"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <rect
-                        fill="#D80027"
-                        height="170.663"
+                        fill="#FFDA44"
+                        height="512"
                         width="512"
                       />
-                      <rect
-                        fill="#D80027"
-                        height="170.663"
-                        width="512"
-                        y="341.337"
-                      />
-                    </g>
-                  </svg>
+                      <g>
+                        <rect
+                          fill="#D80027"
+                          height="170.663"
+                          width="512"
+                        />
+                        <rect
+                          fill="#D80027"
+                          height="170.663"
+                          width="512"
+                          y="341.337"
+                        />
+                      </g>
+                    </svg>
+                  </BrFlag>
                   <span
                     className="mt-4"
                   >
@@ -221,93 +230,98 @@ exports[`Settings component should correctly render the settings page 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
-                  <svg
+                  <BrFlag
                     className="h-12 w-12 sm:h-24 sm:w-24"
-                    viewBox="0 0 512 512"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <rect
-                      fill="#F0F0F0"
-                      height="512"
-                      width="512"
-                    />
-                    <polygon
-                      fill="#D80027"
-                      points="0,304 208,304 208,512 304,512 304,304 512,304 512,208 304,208 304,0 208,0 208,208 0,208   "
-                    />
-                    <g>
-                      <polygon
-                        fill="#0052B4"
-                        points="406.92,333.913 512,438.993 512,333.913  "
+                    <svg
+                      className="h-12 w-12 sm:h-24 sm:w-24"
+                      data-testid="BR-flag"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        fill="#F0F0F0"
+                        height="512"
+                        width="512"
                       />
                       <polygon
-                        fill="#0052B4"
-                        points="333.913,333.913 512,512 512,461.64 384.273,333.913  "
+                        fill="#D80027"
+                        points="0,304 208,304 208,512 304,512 304,304 512,304 512,208 304,208 304,0 208,0 208,208 0,208   "
+                      />
+                      <g>
+                        <polygon
+                          fill="#0052B4"
+                          points="406.92,333.913 512,438.993 512,333.913  "
+                        />
+                        <polygon
+                          fill="#0052B4"
+                          points="333.913,333.913 512,512 512,461.64 384.273,333.913  "
+                        />
+                        <polygon
+                          fill="#0052B4"
+                          points="464.564,512 333.913,381.336 333.913,512  "
+                        />
+                      </g>
+                      <polygon
+                        fill="#F0F0F0"
+                        points="333.913,333.913 512,512 512,461.64 384.273,333.913 "
                       />
                       <polygon
-                        fill="#0052B4"
-                        points="464.564,512 333.913,381.336 333.913,512  "
+                        fill="#D80027"
+                        points="333.913,333.913 512,512 512,461.64 384.273,333.913 "
                       />
-                    </g>
-                    <polygon
-                      fill="#F0F0F0"
-                      points="333.913,333.913 512,512 512,461.64 384.273,333.913 "
-                    />
-                    <polygon
-                      fill="#D80027"
-                      points="333.913,333.913 512,512 512,461.64 384.273,333.913 "
-                    />
-                    <g>
+                      <g>
+                        <polygon
+                          fill="#0052B4"
+                          points="80.302,333.913 0,414.215 0,333.913  "
+                        />
+                        <polygon
+                          fill="#0052B4"
+                          points="178.084,356.559 178.084,511.997 22.658,511.997  "
+                        />
+                      </g>
                       <polygon
-                        fill="#0052B4"
-                        points="80.302,333.913 0,414.215 0,333.913  "
+                        fill="#D80027"
+                        points="127.724,333.916 0,461.641 0,512 0,512 178.084,333.916 "
                       />
+                      <g>
+                        <polygon
+                          fill="#0052B4"
+                          points="105.08,178.087 0,73.007 0,178.087  "
+                        />
+                        <polygon
+                          fill="#0052B4"
+                          points="178.087,178.087 0,0 0,50.36 127.727,178.087  "
+                        />
+                        <polygon
+                          fill="#0052B4"
+                          points="47.436,0 178.087,130.663 178.087,0  "
+                        />
+                      </g>
                       <polygon
-                        fill="#0052B4"
-                        points="178.084,356.559 178.084,511.997 22.658,511.997  "
-                      />
-                    </g>
-                    <polygon
-                      fill="#D80027"
-                      points="127.724,333.916 0,461.641 0,512 0,512 178.084,333.916 "
-                    />
-                    <g>
-                      <polygon
-                        fill="#0052B4"
-                        points="105.08,178.087 0,73.007 0,178.087  "
-                      />
-                      <polygon
-                        fill="#0052B4"
-                        points="178.087,178.087 0,0 0,50.36 127.727,178.087  "
-                      />
-                      <polygon
-                        fill="#0052B4"
-                        points="47.436,0 178.087,130.663 178.087,0  "
-                      />
-                    </g>
-                    <polygon
-                      fill="#F0F0F0"
-                      points="178.087,178.087 0,0 0,50.36 127.727,178.087 "
-                    />
-                    <polygon
-                      fill="#D80027"
-                      points="178.087,178.087 0,0 0,50.36 127.727,178.087 "
-                    />
-                    <g>
-                      <polygon
-                        fill="#0052B4"
-                        points="431.698,178.087 512,97.785 512,178.087  "
+                        fill="#F0F0F0"
+                        points="178.087,178.087 0,0 0,50.36 127.727,178.087 "
                       />
                       <polygon
-                        fill="#0052B4"
-                        points="333.916,155.441 333.916,0.003 489.342,0.003  "
+                        fill="#D80027"
+                        points="178.087,178.087 0,0 0,50.36 127.727,178.087 "
                       />
-                    </g>
-                    <polygon
-                      fill="#D80027"
-                      points="384.276,178.084 512,50.359 512,0 512,0 333.916,178.084 "
-                    />
-                  </svg>
+                      <g>
+                        <polygon
+                          fill="#0052B4"
+                          points="431.698,178.087 512,97.785 512,178.087  "
+                        />
+                        <polygon
+                          fill="#0052B4"
+                          points="333.916,155.441 333.916,0.003 489.342,0.003  "
+                        />
+                      </g>
+                      <polygon
+                        fill="#D80027"
+                        points="384.276,178.084 512,50.359 512,0 512,0 333.916,178.084 "
+                      />
+                    </svg>
+                  </BrFlag>
                   <span
                     className="mt-4"
                   >
@@ -326,28 +340,33 @@ exports[`Settings component should correctly render the settings page 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
-                  <svg
+                  <FrFlag
                     className="h-12 w-12 sm:h-24 sm:w-24"
-                    viewBox="0 0 512 512"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <rect
-                      fill="#F0F0F0"
-                      height="512"
-                      width="512"
-                    />
-                    <rect
-                      fill="#0052B4"
-                      height="512"
-                      width="170.663"
-                    />
-                    <rect
-                      fill="#D80027"
-                      height="512"
-                      width="170.663"
-                      x="341.337"
-                    />
-                  </svg>
+                    <svg
+                      className="h-12 w-12 sm:h-24 sm:w-24"
+                      data-testid="FR-flag"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        fill="#F0F0F0"
+                        height="512"
+                        width="512"
+                      />
+                      <rect
+                        fill="#0052B4"
+                        height="512"
+                        width="170.663"
+                      />
+                      <rect
+                        fill="#D80027"
+                        height="512"
+                        width="170.663"
+                        x="341.337"
+                      />
+                    </svg>
+                  </FrFlag>
                   <span
                     className="mt-4"
                   >

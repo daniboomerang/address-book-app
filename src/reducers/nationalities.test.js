@@ -3,7 +3,7 @@ import { ADD_NATIONALITY, REMOVE_NATIONALITY, BRITISH, SWISS, SPANISH, FRENCH } 
 
 describe('nationalities reducer', () => {
   it('should handle initial state', () => {
-    expect(nationalities(undefined, {})).toEqual([]);
+    expect(nationalities(undefined, {})).toEqual([BRITISH, FRENCH, SWISS, SPANISH]);
   });
 
   it('should handle ADD_NATIONALITY', () => {
