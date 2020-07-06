@@ -62,7 +62,7 @@ exports[`UserPreview component should render correctly 1`] = `
   }
 >
   <div
-    className="w-full block sm:flex border-4 text-center border-light my-6 transform cursor-pointer duration-200 hover:scale-110 border-blue-500"
+    className="w-full block sm:flex border-4 text-center border-light my-6 transform cursor-pointer duration-200 hover:scale-110 outline-none border-blue-500"
     data-testid="user-simmon.martin@example.com"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -179,7 +179,7 @@ exports[`UserPreview component should transition from blue to red color on hover
   }
 >
   <div
-    className="w-full block sm:flex border-4 text-center border-light my-6 transform cursor-pointer duration-200 hover:scale-110 border-red-600 text-red-600 rounded-md"
+    className="w-full block sm:flex border-4 text-center border-light my-6 transform cursor-pointer duration-200 hover:scale-110 outline-none border-red-600 text-red-600 rounded-md"
     data-testid="user-simmon.martin@example.com"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}

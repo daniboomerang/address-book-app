@@ -4,9 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faMobileAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 /**
- * @param {Object} user - User details object
- * @param {boolean} isOpen -  Whether the modal is opened or not
- * @param {function} onclose - Callback to execute when clicking the close icon
+ * @param {Props} props
+ * @param {Object} props.user - User details object
+ * @param {boolean} props.isOpen -  Whether the modal is opened or not
+ * @param {function} props.onclose - Callback to execute when clicking the close icon
  */
 const UserDetailsModal = ({ user, isOpen, onClose }) => {
   const {

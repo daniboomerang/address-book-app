@@ -3,7 +3,8 @@ import { FRENCH } from '../../constants';
 
 /**
  * It renders the French SVG flag
- * @param {string} className - Classnames to be applied at the svg root markup
+ * @param {Props} props
+ * @param {string} props.className - Classnames to be applied at the svg root markup
  */
 const FrFlag = ({ className }) => (
   <svg

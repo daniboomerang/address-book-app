@@ -3,9 +3,10 @@ import { SWISS } from '../../constants';
 
 /**
  * It renders the Swiss SVG flag
- * @param {string} className - Classnames to be applied at the svg root markup
+ * @param {Props} props
+ * @param {string} props.className - Classnames to be applied at the svg root markup
  */
-const BrFlag = ({ className }) => (
+const ChFlag = ({ className }) => (
   <svg
     data-testid={`${SWISS}-flag`}
     className={className}
@@ -20,4 +21,4 @@ const BrFlag = ({ className }) => (
   </svg>
 );
 
-export default BrFlag;
+export default ChFlag;

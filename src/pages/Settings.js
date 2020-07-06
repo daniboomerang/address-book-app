@@ -17,8 +17,9 @@ const mapDispatchToProps = (dispatch) => ({
 /**
  * Adreess book settings page
  * It renders the different nationality options for users fetching
- * @param {Object} selectedNationalities - An array with the currently nationalities filter
- * @param {Object} actions - Object with ADD_NATIONALITY and REMOVE_NATIONALITY redux actions
+ * @param {Props} props
+ * @param {Array} props.selectedNationalities - An array with the currently nationalities filter
+ * @param {Object} props.actions - Object with ADD_NATIONALITY and REMOVE_NATIONALITY redux actions
  */
 export const Settings = (props) => (
   <div className="w-full h-full">

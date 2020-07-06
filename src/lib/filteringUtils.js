@@ -1,7 +1,7 @@
 /**
  * It filters users with first or last name contained in the filter parameter
- * @param {Object} users - The list of users to be filtered
- * @param {String} filter - The parameter used to filter users by first/last name
+ * @param {Array} users - The list of users to be filtered
+ * @param {string} filter - The parameter used to filter users by first/last name
  */
 const filterUsers = (users, filter) => {
   let filteredUsers;

@@ -3,7 +3,8 @@ import { BRITISH } from '../../constants';
 
 /**
  * It renders the Brithish SVG flag
- * @param {string} className - Classnames to be applied at the svg root markup
+ * @param {Props} props
+ * @param {string} props.className - Classnames to be applied at the svg root markup
  */
 const BrFlag = ({ className }) => (
   <svg

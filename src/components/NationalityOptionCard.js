@@ -4,10 +4,11 @@ import { SWISS, SPANISH, BRITISH } from '../constants';
 import { BrFlag, ChFlag, EsFlag, FrFlag } from './flags';
 
 /**
- * @param {string} nationality - The different nationality options -> CH, ES, BR or FR
- * @param {boolean} isSelected - Whether the options shall be deisplayed as selected
- * @param {Function} addNationality - Action to add a new nationality to store
- * @param {Function} removeNationality - Action to remove a new nationality from store
+ * @param {Props} props
+ * @param {string} props.nationality - The different nationality options -> CH, ES, BR or FR
+ * @param {boolean} props.isSelected - Whether the options shall be deisplayed as selected
+ * @param {Function} props.addNationality - Action to add a new nationality to the store
+ * @param {Function} props.removeNationality - Action to remove a nationality from the store
  */
 const NationalityOptionCard = ({ nationality, isSelected, addNationality, removeNationality }) => {
   const handleAddNationality = () => addNationality(nationality);

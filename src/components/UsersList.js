@@ -4,7 +4,8 @@ import UserDetailsModal from './UserDetailsModal';
 
 /**
  * It renders the list of users and displays the user details (Modal)
- * @param {Object} users - The list of users to display
+ * @param {Props} props
+ * @param {Array} props.users - The list of users
  */
 const UsersList = ({ users }) => {
   // State contains the user details or null

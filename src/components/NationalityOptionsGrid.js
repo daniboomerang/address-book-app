@@ -4,6 +4,9 @@ import NationalityOptionCard from './NationalityOptionCard';
 
 /**
  * It renders a grid with the different nationality option cards
+ * @param {Props} props
+ * @param {Array} props.selectedNationalities - The currently filtered nationalities
+ * @param {Object} props.actions - Redux actions for adding/removing nationalities from filter
  */
 const NationalityOptionsGrid = ({ selectedNationalities, actions }) => (
   <div className="px-6 max-w-md m-auto">

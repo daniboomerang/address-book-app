@@ -3,7 +3,8 @@ import cx from 'classnames';
 
 /**
  * It renders a user preview card
- * @param {Object} user - First name, last name, username, email and avatar.
+ * @param {Props} props
+ * @param {Object} props.user - User details object
  */
 const UserPreview = ({ user }) => {
   const [isHovered, setHovered] = useState(false);
@@ -21,7 +22,7 @@ const UserPreview = ({ user }) => {
     <div
       data-testid={`user-${email}`}
       className={cx(
-        'w-full block sm:flex border-4 text-center border-light my-6 transform cursor-pointer duration-200 hover:scale-110',
+        'w-full block sm:flex border-4 text-center border-light my-6 transform cursor-pointer duration-200 hover:scale-110 outline-none',
         {
           'border-red-600 text-red-600 rounded-md': isHovered,
           'border-blue-500': !isHovered,

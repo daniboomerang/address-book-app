@@ -2,6 +2,8 @@ import React from 'react';
 
 /**
  * Alert message displayed at the bottom of the page
+ * @param props
+ * @param {JSX.Element} props.children - The content of the alert message
  */
 const AlertMessage = ({ children }) => (
   <div

@@ -48,7 +48,8 @@ const mapStateToProps = (state) => ({
  * It retrieves the users from the https://randomuser.me API and renders the a grid
  * It makes use of infinite scrolling to load more users
  * It provides a search in order to filter results by first and last name
- * @param {Object} selectedNationalities - An array with the currently nationalities filter
+ * @param {Props} props
+ * @param {Array} props.selectedNationalities - An array with the currently nationalities filter
  */
 export const Home = ({ selectedNationalities }) => {
   const [state, setState] = useState({

@@ -3,9 +3,10 @@ import { SPANISH } from '../../constants';
 
 /**
  * It renders the Spanish SVG flag
- * @param {string} className - Classnames to be applied at the svg root markup
+ * @param {Props} props
+ * @param {string} props.className - Classnames to be applied at the svg root markup
  */
-const BrFlag = ({ className }) => (
+const EsFlag = ({ className }) => (
   <svg
     data-testid={`${SPANISH}-flag`}
     className={className}
@@ -20,4 +21,4 @@ const BrFlag = ({ className }) => (
   </svg>
 );
 
-export default BrFlag;
+export default EsFlag;

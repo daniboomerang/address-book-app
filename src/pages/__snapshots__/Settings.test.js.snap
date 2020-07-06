@@ -145,7 +145,7 @@ exports[`Settings component should correctly render the settings page 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
-                  <BrFlag
+                  <ChFlag
                     className="h-12 w-12 sm:h-24 sm:w-24"
                   >
                     <svg
@@ -164,7 +164,7 @@ exports[`Settings component should correctly render the settings page 1`] = `
                         points="395.13,209.624 302.377,209.624 302.377,116.87 209.623,116.87 209.623,209.624   116.87,209.624 116.87,302.377 209.623,302.377 209.623,395.13 302.377,395.13 302.377,302.377 395.13,302.377 "
                       />
                     </svg>
-                  </BrFlag>
+                  </ChFlag>
                   <span
                     className="mt-4"
                   >
@@ -183,7 +183,7 @@ exports[`Settings component should correctly render the settings page 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
-                  <BrFlag
+                  <EsFlag
                     className="h-12 w-12 sm:h-24 sm:w-24"
                   >
                     <svg
@@ -211,7 +211,7 @@ exports[`Settings component should correctly render the settings page 1`] = `
                         />
                       </g>
                     </svg>
-                  </BrFlag>
+                  </EsFlag>
                   <span
                     className="mt-4"
                   >
