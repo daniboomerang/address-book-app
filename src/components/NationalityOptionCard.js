@@ -16,15 +16,15 @@ const NationalityOptionCard = ({ nationality, isSelected, addNationality, remove
 
   const renderFlag = () => {
     if (nationality === BRITISH) {
-      return <BrFlag className="h-12 w-12 sm:h-24 sm:w-24" />;
+      return <BrFlag className="h-12 w-12 sm:h-24 sm:w-24 m-auto" />;
     }
     if (nationality === SWISS) {
-      return <ChFlag className="h-12 w-12 sm:h-24 sm:w-24" />;
+      return <ChFlag className="h-12 w-12 sm:h-24 sm:w-24 m-auto" />;
     }
     if (nationality === SPANISH) {
-      return <EsFlag className="h-12 w-12 sm:h-24 sm:w-24" />;
+      return <EsFlag className="h-12 w-12 sm:h-24 sm:w-24 m-auto" />;
     }
-    return <FrFlag className="h-12 w-12 sm:h-24 sm:w-24" />;
+    return <FrFlag className="h-12 w-12 sm:h-24 sm:w-24 m-auto" />;
   };
 
   return (

@@ -30,6 +30,7 @@ const UsersList = ({ users }) => {
             key={email + username}
             onClick={handleShowUserModal(user)}
             onKeyPress={handleShowUserModal(user)}
+            className="outline-none"
           >
             <UserPreview user={user} />
           </div>
