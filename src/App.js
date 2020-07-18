@@ -6,7 +6,11 @@ import { HomePage, NotFoundPage, SettingsPage } from './pages';
 import reducer from './reducers';
 
 // Redux conf
-const store = createStore(reducer);
+const store = createStore(
+  reducer,
+  // eslint-disable-next-line
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 /**
  * It orchestrates the app routing logic
