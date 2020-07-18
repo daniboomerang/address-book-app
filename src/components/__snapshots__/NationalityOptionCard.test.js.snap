@@ -2,45 +2,8 @@
 
 exports[`NationalityOptionCard component on BRITISH nationality option card should correctly render and call add nationality action on click 1`] = `
 <NationalityOptionCard
-  addNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-        Array [
-          "BR",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   isSelected={false}
   nationality="BR"
-  removeNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
 >
   <button
     className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
@@ -151,52 +114,8 @@ exports[`NationalityOptionCard component on BRITISH nationality option card shou
 
 exports[`NationalityOptionCard component on BRITISH nationality option card should correctly render when selected and call remove nationallity action on click 1`] = `
 <NationalityOptionCard
-  addNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-        Array [
-          "BR",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   isSelected={true}
   nationality="BR"
-  removeNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-        Array [
-          "BR",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
 >
   <button
     className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
@@ -307,59 +226,8 @@ exports[`NationalityOptionCard component on BRITISH nationality option card shou
 
 exports[`NationalityOptionCard component on FRENCH nationality option card should correctly render and call add nationality action on click 1`] = `
 <NationalityOptionCard
-  addNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-        Array [
-          "BR",
-        ],
-        Array [
-          "FR",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   isSelected={false}
   nationality="FR"
-  removeNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-        Array [
-          "BR",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
 >
   <button
     className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
@@ -405,66 +273,8 @@ exports[`NationalityOptionCard component on FRENCH nationality option card shoul
 
 exports[`NationalityOptionCard component on FRENCH nationality option card should correctly render when selected and call remove nationallity action on click 1`] = `
 <NationalityOptionCard
-  addNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-        Array [
-          "BR",
-        ],
-        Array [
-          "FR",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   isSelected={true}
   nationality="FR"
-  removeNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-        Array [
-          "BR",
-        ],
-        Array [
-          "FR",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
 >
   <button
     className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
@@ -510,73 +320,8 @@ exports[`NationalityOptionCard component on FRENCH nationality option card shoul
 
 exports[`NationalityOptionCard component on SPANISH nationality option card should correctly render and call add nationality action on click 1`] = `
 <NationalityOptionCard
-  addNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-        Array [
-          "BR",
-        ],
-        Array [
-          "FR",
-        ],
-        Array [
-          "ES",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   isSelected={false}
   nationality="ES"
-  removeNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-        Array [
-          "BR",
-        ],
-        Array [
-          "FR",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
 >
   <button
     className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
@@ -624,80 +369,8 @@ exports[`NationalityOptionCard component on SPANISH nationality option card shou
 
 exports[`NationalityOptionCard component on SPANISH nationality option card should correctly render when selected and call remove nationallity action on click 1`] = `
 <NationalityOptionCard
-  addNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-        Array [
-          "BR",
-        ],
-        Array [
-          "FR",
-        ],
-        Array [
-          "ES",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   isSelected={true}
   nationality="ES"
-  removeNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-        Array [
-          "BR",
-        ],
-        Array [
-          "FR",
-        ],
-        Array [
-          "ES",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
 >
   <button
     className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
@@ -745,24 +418,8 @@ exports[`NationalityOptionCard component on SPANISH nationality option card shou
 
 exports[`NationalityOptionCard component on SWISS nationality option card should correctly render and call add nationality action on click 1`] = `
 <NationalityOptionCard
-  addNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   isSelected={false}
   nationality="CH"
-  removeNationality={[MockFunction]}
 >
   <button
     className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 hover:rounded-md border-blue-500"
@@ -801,38 +458,8 @@ exports[`NationalityOptionCard component on SWISS nationality option card should
 
 exports[`NationalityOptionCard component on SWISS nationality option card should correctly render when selected and call remove nationallity action on click 1`] = `
 <NationalityOptionCard
-  addNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
   isSelected={true}
   nationality="CH"
-  removeNationality={
-    [MockFunction] {
-      "calls": Array [
-        Array [
-          "CH",
-        ],
-      ],
-      "results": Array [
-        Object {
-          "type": "return",
-          "value": undefined,
-        },
-      ],
-    }
-  }
 >
   <button
     className="focus:outline-none grid border-4 text-center justify-center transform cursor-pointer duration-200 hover:border-red-600 hover:text-red-600 pt-4 pb-2 md:pt-5 md:pb-3 w-24 sm:w-32 border-red-600 text-red-600 rounded-md scale-110 hover:border-blue-500 hover:text-blue-500"
