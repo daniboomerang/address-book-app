@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from 'axios';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -38,20 +38,15 @@ const Loader = (
   </div>
 );
 
-/** Map redux state to component props */
-const mapStateToProps = (state) => ({
-  selectedNationalities: state.nationalities,
-});
-
 /**
  * Adreess book home page
  * It retrieves the users from the https://randomuser.me API and renders the a grid
  * It makes use of infinite scrolling to load more users
  * It provides a search in order to filter results by first and last name
- * @param {Props} props
- * @param {Array} props.selectedNationalities - An array with the currently nationalities filter
  */
-export const Home = ({ selectedNationalities }) => {
+export const Home = () => {
+  const selectedNationalities = useSelector(({ nationalities }) => nationalities);
+
   const [state, setState] = useState({
     users: [],
     pageNumber: 1,
@@ -195,4 +190,4 @@ export const Home = ({ selectedNationalities }) => {
   );
 };
 
-export default connect(mapStateToProps)(Home);
+export default Home;

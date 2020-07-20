@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { useSelector } from 'react-redux';
 import { render, cleanup, waitFor, fireEvent } from '@testing-library/react';
 import axios from 'axios';
 import { fetchMockedData, usersMockedData } from '../__mocks__/mocked-data';
@@ -8,12 +9,17 @@ import { Home, PAGE_SIZE } from './Home';
 import { NATIONALITIES, SWISS, SPANISH, BRITISH, FRENCH } from '../constants';
 
 jest.mock('axios');
+
 jest.mock('../components/UserPreview', () => ({ user }) => (
   <div data-testid="user">
     <div data-testid="user-first">{user.name.first}</div>
     <div data-testid="user-last">{user.name.last}</div>
   </div>
 ));
+
+jest.mock('react-redux', () => ({
+  useSelector: jest.fn((fn) => fn()),
+}));
 
 jest.mock('../components/Spinner', () => ({ user }) => {
   return <div data-testid="spinner">Loading...</div>;
@@ -32,10 +38,13 @@ describe('Home page component', () => {
 
   it('should properly display error message on fetch error', async () => {
     axios.get.mockImplementationOnce(() => Promise.reject({ message: 'errorMessage' }));
+    useSelector.mockImplementation((callback) => {
+      return callback({ nationalities: [] });
+    });
 
     const { getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
-        <Home selectedNationalities={[]} />
+        <Home />
       </MemoryRouter>
     );
 
@@ -60,10 +69,13 @@ describe('Home page component', () => {
     axios.get.mockImplementationOnce(
       () => new Promise((resolve) => setTimeout(() => resolve(fetchMockedData), 5000))
     );
+    useSelector.mockImplementation((callback) => {
+      return callback({ nationalities: [] });
+    });
 
     const { debug, getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
-        <Home selectedNationalities={[]} />
+        <Home />
       </MemoryRouter>
     );
 
@@ -79,10 +91,13 @@ describe('Home page component', () => {
 
   it('should properly display users on successful fetch', async () => {
     axios.get.mockImplementationOnce(() => Promise.resolve(fetchMockedData));
+    useSelector.mockImplementation((callback) => {
+      return callback({ nationalities: [] });
+    });
 
     const { getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
-        <Home selectedNationalities={[]} />
+        <Home />
       </MemoryRouter>
     );
 
@@ -106,10 +121,13 @@ describe('Home page component', () => {
 
   it('should properly display users with nationalities filter', async () => {
     axios.get.mockImplementationOnce(() => Promise.resolve(fetchMockedData));
+    useSelector.mockImplementation((callback) => {
+      return callback({ nationalities: NATIONALITIES });
+    });
 
     const { getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
-        <Home selectedNationalities={NATIONALITIES} />
+        <Home />
       </MemoryRouter>
     );
 
@@ -139,10 +157,13 @@ describe('Home page component', () => {
 
   it('should properly apply the search filter', async () => {
     axios.get.mockImplementationOnce(() => Promise.resolve(fetchMockedData));
+    useSelector.mockImplementation((callback) => {
+      return callback({ nationalities: [] });
+    });
 
     const { container, debug, getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
-        <Home selectedNationalities={[]} />
+        <Home />
       </MemoryRouter>
     );
 
