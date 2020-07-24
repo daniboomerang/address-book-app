@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import nationalities from './nationalities';
+import usersFetch from './usersFetch';
 
 const rootReducer = combineReducers({
-  nationalities,
+  usersFetch,
 });
 
 export default rootReducer;

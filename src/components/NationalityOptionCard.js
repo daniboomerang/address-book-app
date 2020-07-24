@@ -3,7 +3,10 @@ import cx from 'classnames';
 import { useDispatch } from 'react-redux';
 import { SWISS, SPANISH, BRITISH } from '../constants';
 import { BrFlag, ChFlag, EsFlag, FrFlag } from './flags';
-import { addNationality, removeNationality } from '../actions';
+import {
+  addFetchNationalityFilter,
+  removeFetchNationalityFilter,
+} from '../store/actions/usersFetch';
 
 /**
  * It renders a nationality card and provides the way of selecting it
@@ -13,8 +16,8 @@ import { addNationality, removeNationality } from '../actions';
  */
 const NationalityOptionCard = ({ nationality, isSelected }) => {
   const dispatch = useDispatch();
-  const handleAddNationality = () => dispatch(addNationality(nationality));
-  const handleRemoveNationality = () => dispatch(removeNationality(nationality));
+  const handleAddNationality = () => dispatch(addFetchNationalityFilter(nationality));
+  const handleRemoveNationality = () => dispatch(removeFetchNationalityFilter(nationality));
 
   const renderFlag = () => {
     if (nationality === BRITISH) {

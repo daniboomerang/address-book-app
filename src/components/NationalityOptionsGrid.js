@@ -7,17 +7,16 @@ import NationalityOptionCard from './NationalityOptionCard';
  * It renders a grid with the different nationality option cards
  */
 const NationalityOptionsGrid = () => {
-  const selectedNationalities = useSelector(({ nationalities }) => nationalities);
+  const { nationalitiesFilter } = useSelector(({ usersFetch }) => usersFetch);
 
   return (
     <div className="px-6 max-w-md m-auto">
       <div data-testid="options-grid-message" className="h-20 my-6 text-center">
         Filter your users by nationalies.
-        {selectedNationalities.length === 0 && (
+        {nationalitiesFilter.length === 0 && (
           <div className="text-sm">If no nationalities are selected no filter will be applied</div>
         )}
       </div>
-
       <div
         className="grid grid-cols-2 justify-between items-center m-auto col-gap-4 row-gap-12"
         style={{ justifyItems: 'center' }}
@@ -26,7 +25,7 @@ const NationalityOptionsGrid = () => {
           <NationalityOptionCard
             key={nationality}
             nationality={nationality}
-            isSelected={selectedNationalities.includes(nationality)}
+            isSelected={nationalitiesFilter.includes(nationality)}
           />
         ))}
       </div>

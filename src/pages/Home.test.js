@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { render, cleanup, waitFor, fireEvent } from '@testing-library/react';
-import axios from 'axios';
-import { fetchMockedData, usersMockedData } from '../__mocks__/mocked-data';
 import { MemoryRouter } from 'react-router-dom';
+import { fetchMockedData, usersMockedData } from '../__mocks__/mocked-data';
 import { Home, PAGE_SIZE } from './Home';
-import { NATIONALITIES, SWISS, SPANISH, BRITISH, FRENCH } from '../constants';
-
-jest.mock('axios');
+import {
+  ADD_FETCH_NATIONALITY_FILTER,
+  NATIONALITIES,
+  SWISS,
+  SPANISH,
+  BRITISH,
+  FRENCH,
+} from '../constants';
+import { initialState as usersFetchInitialState } from '../store/reducers/usersFetch';
+import { fetchUsers } from '../store/actions/usersFetch';
 
 jest.mock('../components/UserPreview', () => ({ user }) => (
   <div data-testid="user">
@@ -18,15 +24,22 @@ jest.mock('../components/UserPreview', () => ({ user }) => (
 ));
 
 jest.mock('react-redux', () => ({
-  useSelector: jest.fn((fn) => fn()),
+  useSelector: jest.fn(),
+  useDispatch: jest.fn(),
 }));
 
-jest.mock('../components/Spinner', () => ({ user }) => {
-  return <div data-testid="spinner">Loading...</div>;
-});
+jest.mock('../store/actions/usersFetch', () => ({
+  fetchUsers: jest.fn(),
+}));
+
+const mockDispatch = jest.fn();
+
+jest.mock('../components/Spinner', () => ({ user }) => <div data-testid="spinner">Loading...</div>);
 
 describe('Home page component', () => {
   beforeEach(() => {
+    useDispatch.mockImplementation(() => mockDispatch);
+    mockDispatch.mockImplementation(() => fetchUsers);
     jest.useFakeTimers();
     jest.clearAllMocks();
   });
@@ -36,11 +49,24 @@ describe('Home page component', () => {
     cleanup();
   });
 
-  it('should properly display error message on fetch error', async () => {
-    axios.get.mockImplementationOnce(() => Promise.reject({ message: 'errorMessage' }));
-    useSelector.mockImplementation((callback) => {
-      return callback({ nationalities: [] });
-    });
+  it('should properly call the fetchUsers action', async () => {
+    useSelector.mockImplementation((callback) => callback({ usersFetch: usersFetchInitialState }));
+
+    const { getAllByTestId, getByTestId } = render(
+      <MemoryRouter keyLength={0}>
+        <Home />
+      </MemoryRouter>
+    );
+
+    expect(fetchUsers).toHaveBeenCalledWith(
+      'https://randomuser.me/api/?nat=BR,FR,CH,ES&page=1&results=50'
+    );
+  });
+
+  it('should display error message when the state of the fetch contains an error', async () => {
+    useSelector.mockImplementation((callback) =>
+      callback({ usersFetch: { ...usersFetchInitialState, error: 'Some error.' } })
+    );
 
     const { getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
@@ -50,6 +76,7 @@ describe('Home page component', () => {
 
     // Users wrapper is correctly rendered
     const home = await waitFor(() => getByTestId('home'));
+
     expect(home).toBeDefined();
 
     // ErrorMessage is correctly rendered
@@ -57,21 +84,12 @@ describe('Home page component', () => {
     expect(errorMessage.textContent).toBe(
       'Error retrieving contacts.Refresh if the problem persists.'
     );
-
-    // Axios is correctly invoked
-    expect(axios.get).toHaveBeenCalledTimes(1);
-    expect(axios.get).toHaveBeenCalledWith(
-      `https://randomuser.me/api/?page=1&results=${PAGE_SIZE}`
-    );
   });
 
-  it('should properly render a spinner while users are being fetched', async () => {
-    axios.get.mockImplementationOnce(
-      () => new Promise((resolve) => setTimeout(() => resolve(fetchMockedData), 5000))
+  it('should properly render a spinner when the state of the fetch is loading', async () => {
+    useSelector.mockImplementation((callback) =>
+      callback({ usersFetch: { ...usersFetchInitialState, loading: true } })
     );
-    useSelector.mockImplementation((callback) => {
-      return callback({ nationalities: [] });
-    });
 
     const { debug, getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
@@ -84,16 +102,14 @@ describe('Home page component', () => {
 
     expect(home).toBeDefined();
 
-    // Since the server response has been delayed 5 secs, the Spinner should be rendered
     const errorMessage = getByTestId('spinner');
     expect(errorMessage.textContent).toBe('Loading...');
   });
 
-  it('should properly display users on successful fetch', async () => {
-    axios.get.mockImplementationOnce(() => Promise.resolve(fetchMockedData));
-    useSelector.mockImplementation((callback) => {
-      return callback({ nationalities: [] });
-    });
+  it('should properly display the users stored in the fetch state', async () => {
+    useSelector.mockImplementation((callback) =>
+      callback({ usersFetch: { ...usersFetchInitialState, users: usersMockedData } })
+    );
 
     const { getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
@@ -111,19 +127,12 @@ describe('Home page component', () => {
     for (let i = 0; i < usersMockedData.length; i++) {
       expect(users[i].textContent).toContain(usersMockedData[i].name.first);
     }
-
-    // Axios is correctly invoked
-    expect(axios.get).toHaveBeenCalledTimes(1);
-    expect(axios.get).toHaveBeenCalledWith(
-      `https://randomuser.me/api/?page=1&results=${PAGE_SIZE}`
-    );
   });
 
   it('should properly display users with nationalities filter', async () => {
-    axios.get.mockImplementationOnce(() => Promise.resolve(fetchMockedData));
-    useSelector.mockImplementation((callback) => {
-      return callback({ nationalities: NATIONALITIES });
-    });
+    useSelector.mockImplementation((callback) =>
+      callback({ usersFetch: { ...usersFetchInitialState, users: usersMockedData } })
+    );
 
     const { getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>
@@ -147,19 +156,12 @@ describe('Home page component', () => {
     expect(getByTestId(`${SWISS}-flag`)).toBeTruthy();
     expect(getByTestId(`${SPANISH}-flag`)).toBeTruthy();
     expect(getByTestId(`${FRENCH}-flag`)).toBeTruthy();
-
-    // Axios is correctly invoked
-    expect(axios.get).toHaveBeenCalledTimes(1);
-    expect(axios.get).toHaveBeenCalledWith(
-      `https://randomuser.me/api/?nat=${NATIONALITIES}&page=1&results=${PAGE_SIZE}`
-    );
   });
 
   it('should properly apply the search filter', async () => {
-    axios.get.mockImplementationOnce(() => Promise.resolve(fetchMockedData));
-    useSelector.mockImplementation((callback) => {
-      return callback({ nationalities: [] });
-    });
+    useSelector.mockImplementation((callback) =>
+      callback({ usersFetch: { ...usersFetchInitialState, users: usersMockedData } })
+    );
 
     const { container, debug, getAllByTestId, getByTestId } = render(
       <MemoryRouter keyLength={0}>

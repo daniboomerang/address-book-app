@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import axios from 'axios';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import filterUsers from '../lib/filteringUtils';
 import { AlertMessage, BrFlag, ChFlag, EsFlag, FrFlag, UsersList, Spinner } from '../components';
-import { SWISS, SPANISH, BRITISH, FRENCH } from '../constants';
-
-export const PAGE_SIZE = 50;
-const MAX_CATALOGUE_SIZE = 1000;
+import { SWISS, SPANISH, BRITISH, FRENCH, PAGE_SIZE } from '../constants';
+import { fetchUsers } from '../store/actions/usersFetch';
 
 /**
  * InfiniteScroll end message node
@@ -45,50 +42,28 @@ const Loader = (
  * It provides a search in order to filter results by first and last name
  */
 export const Home = () => {
-  const selectedNationalities = useSelector(({ nationalities }) => nationalities);
-
+  const { users, pageNumber, hasMore, loading, error, nationalitiesFilter } = useSelector(
+    ({ usersFetch }) => usersFetch
+  );
+  const dispatch = useDispatch();
   const [state, setState] = useState({
-    users: [],
-    pageNumber: 1,
-    hasMore: true,
-    error: '',
     searchFilter: '',
   });
+  const { searchFilter } = state;
 
-  const { users, pageNumber, hasMore, error, searchFilter } = state;
+  const handleDispatch = () => {
+    const nationalityFilterParam = nationalitiesFilter.length ? `nat=${nationalitiesFilter}&` : '';
 
-  // It fetches users from randomuser API
-  const loadUsers = () => {
-    // Buulding up the nationality API parameter
-    const nationalityFilter = selectedNationalities.length ? `nat=${selectedNationalities}&` : '';
-
-    axios
-      .get(`https://randomuser.me/api/?${nationalityFilter}page=${pageNumber}&results=${PAGE_SIZE}`)
-      .then(({ data: { results: newUsers } }) => {
-        setState({
-          ...state,
-          // Adding new users to the list
-          users: [...users, ...newUsers],
-          // Updating page numbers
-          pageNumber: pageNumber + 1,
-          // Updating hasMore after last fetch. Substract PAGE_SIZE due to the first loading
-          hasMore: users.length < MAX_CATALOGUE_SIZE - PAGE_SIZE,
-          // Removing error state
-          error: '',
-        });
-      })
-      .catch(({ message: errorMessage }) => {
-        setState({
-          ...state,
-          error: errorMessage,
-        });
-      });
+    dispatch(
+      fetchUsers(
+        `https://randomuser.me/api/?${nationalityFilterParam}page=${pageNumber}&results=${PAGE_SIZE}`
+      )
+    );
   };
 
   // We load users after FIRST effect
   useEffect(() => {
-    // Use effect for loading users
-    loadUsers();
+    handleDispatch();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -142,9 +117,9 @@ export const Home = () => {
       </header>
       <InfiniteScroll
         dataLength={filteredUsers.length}
-        next={loadUsers}
+        next={handleDispatch}
         hasMore={blockFetch}
-        loader={Loader}
+        loader={loading ? Loader : null}
         endMessage={renderEndMessage(isFilterApplied, areThereResults)}
       >
         <div
@@ -155,21 +130,21 @@ export const Home = () => {
             <div className="my-8">
               <div className="text-center text-xs">
                 {`${filteredUsers.length} result${filteredUsers.length > 1 ? 's' : ''}${
-                  selectedNationalities.length > 0 ? ' from' : ''
+                  nationalitiesFilter.length > 0 ? ' from' : ''
                 }`}
               </div>
-              {selectedNationalities && (
+              {nationalitiesFilter && (
                 <div className="flex justify-center mt-2">
-                  {selectedNationalities.includes(BRITISH) && (
+                  {nationalitiesFilter.includes(BRITISH) && (
                     <BrFlag className="h-4 w-4 sm:h-8 sm:w-8 mx-1" />
                   )}
-                  {selectedNationalities.includes(SWISS) && (
+                  {nationalitiesFilter.includes(SWISS) && (
                     <ChFlag className="h-4 w-4 sm:h-8 sm:w-8 mx-1" />
                   )}
-                  {selectedNationalities.includes(SPANISH) && (
+                  {nationalitiesFilter.includes(SPANISH) && (
                     <EsFlag className="h-4 w-4 sm:h-8 sm:w-8 mx-1" />
                   )}
-                  {selectedNationalities.includes(FRENCH) && (
+                  {nationalitiesFilter.includes(FRENCH) && (
                     <FrFlag className="h-4 w-4 sm:h-8 sm:w-8 mx-1" />
                   )}
                 </div>

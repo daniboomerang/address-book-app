@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { createStore } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import { HomePage, NotFoundPage, SettingsPage } from './pages';
-import reducer from './reducers';
+import reducer from './store/reducers';
 
 // Redux conf
-const store = createStore(
-  reducer,
-  // eslint-disable-next-line
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+// eslint-disable-next-line
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(reducer, composeEnhancer(applyMiddleware(thunk)));
 
 /**
  * It orchestrates the app routing logic

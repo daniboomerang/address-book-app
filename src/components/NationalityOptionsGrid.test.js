@@ -4,9 +4,10 @@ import { useSelector } from 'react-redux';
 import NationalityOptionsGrid from './NationalityOptionsGrid';
 import { NATIONALITIES } from '../constants';
 import NationalityOptionCard from './NationalityOptionCard';
+import { initialState as usersFetchInitialState } from '../store/reducers/usersFetch';
 
 jest.mock('react-redux', () => ({
-  useSelector: jest.fn((fn) => fn()),
+  useSelector: jest.fn(),
 }));
 
 jest.mock('../components/NationalityOptionCard', () => () => {
@@ -19,9 +20,7 @@ describe('NationalityOptionsGrid component', () => {
   });
 
   it('should correctly render the grid when nationalities filter applied', () => {
-    useSelector.mockImplementation((callback) => {
-      return callback({ nationalities: NATIONALITIES });
-    });
+    useSelector.mockImplementation((callback) => callback({ usersFetch: usersFetchInitialState }));
     const wrapper = mount(<NationalityOptionsGrid />);
 
     expect(wrapper.find('div[data-testid="options-grid-message"]').text()).toBe(
@@ -32,9 +31,9 @@ describe('NationalityOptionsGrid component', () => {
   });
 
   it('should correctly render the grid when no nationalities filter applied', () => {
-    useSelector.mockImplementation((callback) => {
-      return callback({ nationalities: [] });
-    });
+    useSelector.mockImplementation((callback) =>
+      callback({ usersFetch: { ...usersFetchInitialState, nationalitiesFilter: [] } })
+    );
     const wrapper = mount(<NationalityOptionsGrid />);
 
     expect(wrapper.find('div[data-testid="options-grid-message"]').text()).toBe(
